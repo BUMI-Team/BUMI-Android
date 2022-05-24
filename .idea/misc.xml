@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/zefan/AndroidStudioProjects/BUMI/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI/app/src/main/res/layout/activity_consultation_agenda.xml" value="0.21052631578947367" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/drawable/custom_button.xml" value="0.1745" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1565" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.1" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/drawable/ic_baseline_logout_24.xml" value="0.1575" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/drawable/ic_baseline_view_agenda_24.xml" value="0.164" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1565" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/drawable/progress_bg.xml" value="0.1745" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout-v23/fragment_account.xml" value="0.25" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/activity_consultation_agenda.xml" value="0.128" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/activity_edit_account.xml" value="0.152" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/activity_main.xml" value="0.14673913043478262" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/activity_welcome.xml" value="0.264" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/content_splash_screen.xml" value="0.1" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/fragment_account.xml" value="0.264" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/fragment_consultation.xml" value="0.1" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/fragment_dashboard.xml" value="0.18795289855072464" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/fragment_favorite.xml" value="0.15172101449275363" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/fragment_first.xml" value="0.264" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/fragment_profile.xml" value="0.18795289855072464" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/layout/fragment_second.xml" value="0.21197916666666666" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/Training-Platform-for-Micro-Small-and-Medium-Enterprises/Android/BUMI/app/src/main/res/menu/menu_option.xml" value="0.264" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
