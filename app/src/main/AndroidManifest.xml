@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BUMI">
         <activity
+            android:name=".ui.recommendation.BusinessRecommendation"
+            android:exported="false" />
+        <activity
+            android:name=".ui.recommendation.BusinessDetail"
+            android:exported="false" />
+        <activity
             android:name=".ui.account.ConsultationAgendaActivity"
             android:exported="false" />
         <activity
