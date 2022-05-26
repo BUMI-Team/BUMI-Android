@@ -14,4 +14,38 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_splash">SplashActivity</string>
+
+    <string name="video_title">Video Title</string>
+    <string name="video_item">Training Video</string>
+    <string name="home_banner_image">Image Home Banner</string>
+    <string name="searchHint">Cari Judul Video</string>
+    <string name="kategori_usaha">Kategori Usaha</string>
+    <string name="detail_traning_video">Detail Training Video</string>
+    <string name="video_description">Deskripsi</string>
+    <string name="toggleFav">Video Favorit</string>
+    <string name="list_training_video">List Training Video</string>
+    <string name="search_button">Search Button</string>
+    <string name="title_business_detail">Silahkan lengkapi data anda</string>
+    <string name="jenis_usaha">Jenis usaha yang sedang dijalankan :</string>
+    <string name="contoh_jenis_usaha">(cth : restoran seafood, warung sembako, makanan beku)</string>
+    <string name="pilih_bidang_keahlian">Pilih bidang keahlian :</string>
+    <string name="kuliner">Kuliner</string>
+    <string name="rumahTangga">Rumah Tangga</string>
+    <string name="kesehatan">Kesehatan</string>
+    <string name="hobi">Hobi</string>
+    <string name="desc_hobi">(Jika hobi lebih dari 1, gunakan koma sebagai pemisah)</string>
+    <string name="modal_usaha">Modal saat memulai usaha</string>
+    <string name="usaha_mikro"><![CDATA[Usaha Mikro (<50 juta)]]></string>
+    <string name="usaha_kecil">Usaha Kecil (50–500 juta)</string>
+    <string name="usaha_menengah">Usaha Menengah (500 juta–10 Milyar)</string>
+    <string name="title_rekom_usaha">Kami akan memilih bidang usaha yang cocok untuk anda, mohon diisi dengan data yang benar.</string>
+    <string name="pengalaman_bekerja">Pengalaman bekerja :</string>
+    <string name="contoh_kerja">(cth : pegawai swasta, guru, wirausaha, barista)</string>
+    <string name="desc_keahlian">(Bisa pilih lebih dari satu)</string>
+    <string name="modal_usaha_rekom">Modal usaha</string>
+    <string-array name="kategori_dropdown_array">
+        <item>Kuliner</item>
+        <item>Rumah Tangga</item>
+        <item>Kesehatan</item>
+    </string-array>
 </resources>

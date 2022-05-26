@@ -15,4 +15,9 @@
     <color name="orange_700">#F57C00</color>
 
     <color name="green_pastel">#F8FFEC</color>
+    <color name="transparent">#0000FFFF</color>
+    <color name="light_blue">#E9F9FF</color>
+    <color name="grey">#C4C4C4</color>
+    <color name="light_grey">#F1F1F1</color>
+    <color name="underline">#CECECE</color>
 </resources>
