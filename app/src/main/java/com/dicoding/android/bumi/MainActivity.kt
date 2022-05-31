@@ -39,22 +39,9 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
     }
 
-    // Option Menu
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_option, menu)
-        val list = menu.findItem(R.id.menu_logout)
-        list.isVisible = true
-        return super.onCreateOptionsMenu(menu)
-    }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.menu_logout -> {
-//                binding.btnLogout.setOnClickListener {
-//                    mainViewModel.logout()
-//                }
-                startActivity(Intent(this@MainActivity, WelcomeActivity::class.java))
-            }
+
         }
         return super.onOptionsItemSelected(item)
     }
