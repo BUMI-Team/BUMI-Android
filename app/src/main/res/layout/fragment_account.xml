@@ -14,7 +14,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:background="@color/navy_700"
+            android:background="@color/cyan_500"
             android:padding="20dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -38,7 +38,7 @@
                 android:layout_weight="1"
                 android:layout_height="125dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="@color/navy_700"
+                android:backgroundTint="@color/bluecyan_700"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:text="Edit Profil Akun"
@@ -51,7 +51,7 @@
                 android:layout_weight="1"
                 android:layout_height="125dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="@color/navy_700"
+                android:backgroundTint="@color/bluecyan_700"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:text="Agenda Konsultasi"
@@ -62,8 +62,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginBottom="30dp"
-            android:paddingBottom="20dp"
             android:paddingStart="20dp"
             android:paddingEnd="20dp">
 
@@ -151,6 +149,26 @@
                     android:text="Kuliner" />
             </com.google.android.material.textfield.TextInputLayout>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:padding="20dp">
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:alpha="1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/red"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Logout"
+                android:textSize="18sp"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

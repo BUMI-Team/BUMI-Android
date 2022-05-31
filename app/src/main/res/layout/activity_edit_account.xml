@@ -13,7 +13,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="@color/navy_700"
+            android:background="@color/cyan_500"
             android:padding="20dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -37,7 +37,7 @@
                 android:layout_weight="1"
                 android:layout_height="60dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="@color/navy_700"
+                android:backgroundTint="@color/bluecyan_700"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:text="Ganti Foto"
@@ -105,7 +105,7 @@
                 android:layout_weight="1"
                 android:layout_height="60dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="@color/navy_700"
+                android:backgroundTint="@color/bluecyan_700"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:text="Konfirmasi"

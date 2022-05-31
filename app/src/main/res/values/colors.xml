@@ -14,6 +14,16 @@
     <color name="orange_200">#FFCC80</color>
     <color name="orange_700">#F57C00</color>
 
+    <color name="bluecyan_200">#9AEAFF</color>
+    <color name="bluecyan_500">#59AAC3</color>
+    <color name="bluecyan_700">#006F86</color>
+
+    <color name="cyan_500">#12A3C7</color>
+    <color name="cyan_700">#006384</color>
+    <color name="cyan_900">#002A47</color>
+
+    <color name="red">#D32F2F</color>
+
     <color name="green_pastel">#F8FFEC</color>
     <color name="transparent">#0000FFFF</color>
     <color name="light_blue">#E9F9FF</color>

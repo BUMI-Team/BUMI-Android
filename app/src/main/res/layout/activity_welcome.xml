@@ -59,7 +59,7 @@
         android:paddingTop="14dp"
         android:paddingBottom="14dp"
         android:alpha="1"
-        android:backgroundTint="@color/navy_700"
+        android:backgroundTint="@color/bluecyan_700"
         android:text="Sign Up with email"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
