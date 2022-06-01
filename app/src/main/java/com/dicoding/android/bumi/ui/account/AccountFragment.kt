@@ -43,8 +43,6 @@ class AccountFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-
-
         _binding?.btnEditProfil?.setOnClickListener {
             val intent = Intent (this@AccountFragment.context, EditAccountActivity::class.java)
             startActivity(intent)
