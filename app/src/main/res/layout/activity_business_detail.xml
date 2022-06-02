@@ -47,6 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:text="@string/contoh_jenis_usaha"
         android:textColor="@color/black"
         android:textSize="12sp"
@@ -59,6 +60,7 @@
         android:layout_width="376dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_contoh_usaha">
 
@@ -74,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/poppins"
         android:text="@string/pilih_bidang_keahlian"
         android:textColor="@color/black"
@@ -87,6 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:text="@string/desc_keahlian"
         android:textColor="@color/black"
         android:textSize="12sp"
@@ -98,10 +101,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins"
         android:onClick="onCheckboxClicked"
         android:text="@string/kuliner"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins"
         android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_desc_keahlian" />
@@ -111,6 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/poppins"
         android:onClick="onCheckboxClicked"
         android:text="@string/rumahTangga"
@@ -123,6 +128,7 @@
         android:id="@+id/checkbox_kesehatan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="24dp"
         android:fontFamily="@font/poppins"
         android:onClick="onCheckboxClicked"
@@ -150,6 +156,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:text="@string/desc_hobi"
         android:textColor="@color/black"
         android:textSize="12sp"
@@ -162,6 +169,7 @@
         android:layout_width="376dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_desc_hobi">
 
@@ -178,9 +186,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="18dp"
-        android:text="@string/modal_usaha"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/poppins"
+        android:text="@string/modal_usaha"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -191,6 +199,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_modal_usaha">
@@ -209,18 +218,37 @@
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:onClick="onRadioButtonClicked"
+            android:text="@string/usaha_kecil"
             android:textColor="@color/black"
-            android:textSize="13sp"
-            android:text="@string/usaha_kecil" />
+            android:textSize="13sp" />
 
         <RadioButton
             android:id="@+id/radio_menengah"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:onClick="onRadioButtonClicked"
+            android:text="@string/usaha_menengah"
             android:textColor="@color/black"
-            android:textSize="13sp"
-            android:text="@string/usaha_menengah" />
+            android:textSize="13sp" />
     </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_style"
+        android:fontFamily="@font/poppins"
+        android:text="@string/konfirmasi_button"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg_modal_usaha"
+        app:layout_constraintVertical_bias="0.807" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

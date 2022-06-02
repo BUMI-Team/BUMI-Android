@@ -43,6 +43,7 @@
     <string name="contoh_kerja">(cth : pegawai swasta, guru, wirausaha, barista)</string>
     <string name="desc_keahlian">(Bisa pilih lebih dari satu)</string>
     <string name="modal_usaha_rekom">Modal usaha</string>
+    <string name="konfirmasi_button">Konfirmasi</string>
     <string-array name="kategori_dropdown_array">
         <item>Kuliner</item>
         <item>Rumah Tangga</item>

@@ -8,18 +8,22 @@
         <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/drawable-v24/ic_search.xml" value="0.1" />
         <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/drawable-v24/searchView_background.xml" value="0.121" />
         <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/drawable-v24/spinner_style.xml" value="0.1" />
+        <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/drawable/banner_style.xml" value="0.1585" />
+        <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/drawable/bg_list_video.xml" value="0.1" />
+        <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/drawable/button_style.xml" value="0.184" />
         <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/drawable/progress_bg.xml" value="0.2555" />
         <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/drawable/search_view_style.xml" value="0.2" />
         <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/drawable/text_view_style.xml" value="0.2405" />
         <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/layout-v28/activity_business_detail.xml" value="0.25" />
-        <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/layout/activity_business_detail.xml" value="0.4" />
-        <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/layout/activity_business_recommendation.xml" value="0.25" />
-        <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/layout/activity_detail_video.xml" value="0.4" />
+        <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/layout/activity_business_detail.xml" value="0.3619047619047619" />
+        <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/layout/activity_business_recommendation.xml" value="0.2" />
+        <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/layout/activity_consultation_agenda.xml" value="0.22509057971014493" />
+        <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/layout/activity_detail_video.xml" value="0.264" />
         <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/layout/activity_favorite.xml" value="0.11203703703703703" />
         <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/layout/fragment_favorite.xml" value="0.264" />
-        <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/ITHB/Bangkit 22/Dicoding/Mobile Developer/BUMI/app/src/main/res/layout/item_row_video.xml" value="0.25" />
         <entry key="..\:/Users/zefan/AndroidStudioProjects/BUMI/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/drawable-xxhdpi/unselected.xml" value="0.1" />
