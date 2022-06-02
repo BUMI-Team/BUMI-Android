@@ -51,4 +51,5 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.google.android.exoplayer:exoplayer-core:2.17.1'
     implementation 'com.google.android.exoplayer:exoplayer-ui:2.17.1'
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
 }

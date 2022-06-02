@@ -5,10 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.SearchView
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.denzcoskun.imageslider.constants.ScaleTypes
+import com.denzcoskun.imageslider.models.SlideModel
 import com.dicoding.android.bumi.R
 import com.dicoding.android.bumi.databinding.FragmentHomeBinding
 
@@ -16,8 +19,6 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -30,12 +31,9 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-//        binding.searchView.queryHint = getString(R.string.searchHint);
-
-//        val textView: TextView = binding.textHome
-//        homeViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
+        binding.svSearchVideo.queryHint = getString(R.string.searchHint)
+        binding.svSearchVideo.setIconifiedByDefault(false)
+        setBannerSlider()
         setSpinner()
         return root
     }
@@ -57,5 +55,18 @@ class HomeFragment : Fragment() {
                 spinner.adapter = adapter
             }
         }
+    }
+
+    private fun setBannerSlider() {
+
+        val bannerSlider = binding.homeBannerSlider
+        val bannerList = ArrayList<SlideModel>()
+
+        bannerList.add(SlideModel(R.drawable.banner_example))
+        bannerList.add(SlideModel(R.drawable.banner_example2))
+        bannerList.add(SlideModel(R.drawable.banner_example3))
+        bannerList.add(SlideModel(R.drawable.banner_example))
+
+        bannerSlider.setImageList(bannerList, ScaleTypes.FIT)
     }
 }

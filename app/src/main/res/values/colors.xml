@@ -20,4 +20,6 @@
     <color name="grey">#C4C4C4</color>
     <color name="light_grey">#F1F1F1</color>
     <color name="underline">#CECECE</color>
+    <color name="primary_cyan">#12A3C7</color>
+    <color name="primary_blue_cyan">#006F86</color>
 </resources>

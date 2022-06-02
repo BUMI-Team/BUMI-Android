@@ -6,79 +6,101 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <ImageView
-        android:id="@+id/banner_image"
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/home_banner_slider"
         android:layout_width="match_parent"
-        android:layout_height="185dp"
-        android:contentDescription="@string/home_banner_image"
-        android:src="@drawable/banner_example"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="230dp"
+        app:iss_auto_cycle="true"
+        app:iss_delay="0"
+        app:iss_period="4000"
+        app:iss_selected_dot="@drawable/default_selected_dot"
+        app:iss_unselected_dot="@drawable/default_unselected_dot"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/banner_example" />
+        tools:layout_editor_absoluteX="16dp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/searchTextInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    </com.denzcoskun.imageslider.ImageSlider>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/sv_search_video"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:hintEnabled="false">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_search"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/search_view_style"
-            android:hint="@string/searchHint"
-            android:inputType="text"
-            android:maxLines="1" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <ImageView
-        android:id="@+id/btn_search"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:src="@drawable/ic_search"
-        app:layout_constraintBottom_toBottomOf="@+id/searchTextInputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/search_button"/>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_training_video"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/category_spinner"
-        app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/item_row_video"
-        android:contentDescription="@string/list_training_video"/>
-
-    <Spinner
-        android:id="@+id/category_spinner"
-        android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/list_training_video"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/search_view_style"
+        android:paddingTop="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/spinner_style"
-        app:layout_constraintTop_toBottomOf="@+id/banner_image"
-        android:spinnerMode="dropdown"
-        android:contentDescription="@string/kategori_usaha"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--        <com.google.android.material.textfield.TextInputLayout-->
+    <!--            android:id="@+id/searchTextInputLayout"-->
+    <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="16dp"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:layout_marginEnd="16dp"-->
+    <!--            app:hintEnabled="false"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--            <com.google.android.material.textfield.TextInputEditText-->
+    <!--                android:id="@+id/et_search"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="40dp"-->
+    <!--                android:background="@drawable/search_view_style"-->
+    <!--                android:hint="@string/searchHint"-->
+    <!--                android:inputType="text"-->
+    <!--                android:maxLines="1" />-->
+    <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/btn_search"-->
+    <!--        android:layout_width="40dp"-->
+    <!--        android:layout_height="32dp"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:layout_marginEnd="24dp"-->
+    <!--        android:contentDescription="@string/search_button"-->
+    <!--        android:src="@drawable/ic_search"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/searchTextInputLayout"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <RelativeLayout
+        android:id="@+id/rl_list_video"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_list_video"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_banner_slider"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_training_video"
+            android:layout_width="363dp"
+            android:layout_height="476dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:contentDescription="@string/list_training_video"
+            tools:listitem="@layout/item_row_video" />
+
+        <Spinner
+            android:id="@+id/category_spinner"
+            android:layout_width="330dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/spinner_style"
+            android:contentDescription="@string/kategori_usaha"
+            android:spinnerMode="dropdown"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
