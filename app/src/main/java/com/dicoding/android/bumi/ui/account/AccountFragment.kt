@@ -48,6 +48,11 @@ class AccountFragment : Fragment() {
             startActivity(intent)
         }
 
+        _binding?.btnConsultationAgenda?.setOnClickListener {
+            val intent = Intent(this@AccountFragment.context, ConsultationAgendaActivity::class.java)
+            startActivity(intent)
+        }
+
         _binding?.btnLogout?.setOnClickListener {
             val intent = Intent (this@AccountFragment.context, WelcomeActivity::class.java)
             startActivity(intent)

@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">BUMI</string>
-    <string name="title_home">Home</string>
-    <string name="title_consultation">Consultation</string>
-    <string name="title_favorite">Favorite</string>
-    <string name="title_account">Account</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_consultation">Konsultasi</string>
+    <string name="title_favorite">Favorit</string>
+    <string name="title_account">Akun</string>
     <string name="title_activity_splash_screen">SplashScreenActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -44,6 +44,7 @@
     <string name="desc_keahlian">(Bisa pilih lebih dari satu)</string>
     <string name="modal_usaha_rekom">Modal usaha</string>
     <string name="konfirmasi_button">Konfirmasi</string>
+    <string name="login_failed_msg">Gagal Masuk, Salah Email/Password Tidak Valid</string>
     <string-array name="kategori_dropdown_array">
         <item>Kuliner</item>
         <item>Rumah Tangga</item>
