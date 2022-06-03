@@ -68,7 +68,10 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setupViewModel() {
-        loginViewModel = ViewModelProvider(this, PrefViewModelFactory(LoginPreferences.getInstance(dataStore)))[LoginViewModel::class.java]
+        loginViewModel = ViewModelProvider(
+            this,
+            PrefViewModelFactory(LoginPreferences.getInstance(dataStore))
+        )[LoginViewModel::class.java]
     }
 
     // Login
@@ -89,9 +92,8 @@ class LoginActivity : AppCompatActivity() {
 //                password != user.password -> {
 //                    binding.etlPassword.error = "Password tidak sesuai"
 //                }
-                else -> {  
+                else -> {
                     login()
-                    popUpDialog()
                 }
             }
         }
@@ -109,20 +111,20 @@ class LoginActivity : AppCompatActivity() {
 
         val btnBelum = popUpDialog.findViewById<Button>(R.id.button_belum)
         val btnSudah = popUpDialog.findViewById<Button>(R.id.button_sudah)
-        btnBelum.setOnClickListener{
+        btnBelum.setOnClickListener {
             val intent = Intent(this, BusinessRecommendationActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
             finish()
         }
-        btnSudah.setOnClickListener{
+        btnSudah.setOnClickListener {
             val intent = Intent(this, BusinessDetailActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
             finish()
         }
         popUpDialog.show()
-        
+
     }
 
     private fun login() {
@@ -136,17 +138,22 @@ class LoginActivity : AppCompatActivity() {
                 val responseBody = response.body()
                 if (response.isSuccessful && responseBody != null) {
                     onLoading(false)
-                    loginViewModel.saveUser(User(responseBody.displayName, responseBody.stsTokenManager.accessToken, true))
-
+                    loginViewModel.saveUser(
+                        User(
+                            responseBody.displayName,
+                            responseBody.stsTokenManager.accessToken,
+                            true
+                        )
+                    )
                     Toast.makeText(this@LoginActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
-
-                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                    startActivity(intent)
-                    finish()
+                    popUpDialog()
                 } else {
                     onLoading(false)
-                    Toast.makeText(this@LoginActivity, getString(R.string.login_failed_msg), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this@LoginActivity,
+                        getString(R.string.login_failed_msg),
+                        Toast.LENGTH_SHORT
+                    ).show()
                     Log.e(ContentValues.TAG, "onFailure: ${response.message()}")
                 }
             }

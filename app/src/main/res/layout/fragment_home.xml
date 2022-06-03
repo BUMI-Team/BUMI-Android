@@ -33,41 +33,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--        <com.google.android.material.textfield.TextInputLayout-->
-    <!--            android:id="@+id/searchTextInputLayout"-->
-    <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:layout_marginStart="16dp"-->
-    <!--            android:layout_marginTop="8dp"-->
-    <!--            android:layout_marginEnd="16dp"-->
-    <!--            app:hintEnabled="false"-->
-    <!--            app:layout_constraintEnd_toEndOf="parent"-->
-    <!--            app:layout_constraintStart_toStartOf="parent"-->
-    <!--            app:layout_constraintTop_toTopOf="parent">-->
-
-    <!--            <com.google.android.material.textfield.TextInputEditText-->
-    <!--                android:id="@+id/et_search"-->
-    <!--                android:layout_width="0dp"-->
-    <!--                android:layout_height="40dp"-->
-    <!--                android:background="@drawable/search_view_style"-->
-    <!--                android:hint="@string/searchHint"-->
-    <!--                android:inputType="text"-->
-    <!--                android:maxLines="1" />-->
-    <!--        </com.google.android.material.textfield.TextInputLayout>-->
-
-    <!--    <ImageView-->
-    <!--        android:id="@+id/btn_search"-->
-    <!--        android:layout_width="40dp"-->
-    <!--        android:layout_height="32dp"-->
-    <!--        android:layout_marginTop="8dp"-->
-    <!--        android:layout_marginEnd="24dp"-->
-    <!--        android:contentDescription="@string/search_button"-->
-    <!--        android:src="@drawable/ic_search"-->
-    <!--        app:layout_constraintBottom_toBottomOf="@+id/searchTextInputLayout"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
-
     <RelativeLayout
         android:id="@+id/rl_list_video"
         android:layout_width="match_parent"
