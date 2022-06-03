@@ -1,16 +1,21 @@
 package com.dicoding.android.bumi.ui.login
 
+import android.app.Dialog
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
 import android.service.controls.ControlsProviderService
 import android.util.Log
 import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.Button
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.datastore.core.DataStore
@@ -24,6 +29,8 @@ import com.dicoding.android.bumi.data.local.entity.User
 import com.dicoding.android.bumi.data.model.LoginResponse
 import com.dicoding.android.bumi.data.remote.ApiConfig
 import com.dicoding.android.bumi.databinding.ActivityLoginBinding
+import com.dicoding.android.bumi.ui.recommendation.BusinessDetailActivity
+import com.dicoding.android.bumi.ui.recommendation.BusinessRecommendationActivity
 import com.dicoding.android.bumi.ui.register.RegisterActivity
 import com.dicoding.android.bumi.utils.PrefViewModelFactory
 import retrofit2.Call
@@ -82,14 +89,9 @@ class LoginActivity : AppCompatActivity() {
 //                password != user.password -> {
 //                    binding.etlPassword.error = "Password tidak sesuai"
 //                }
-                else -> {
-                    // Login
+                else -> {  
                     login()
-//                    Toast.makeText(this@LoginActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
-//                    val intent = Intent(this, MainActivity::class.java)
-//                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-//                    startActivity(intent)
-//                    finish()
+                    popUpDialog()
                 }
             }
         }
@@ -97,6 +99,30 @@ class LoginActivity : AppCompatActivity() {
         binding.tvRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
+    }
+
+    private fun popUpDialog() {
+        val popUpDialog = Dialog(this)
+        popUpDialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        popUpDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        popUpDialog.setContentView(R.layout.popup_after_login)
+
+        val btnBelum = popUpDialog.findViewById<Button>(R.id.button_belum)
+        val btnSudah = popUpDialog.findViewById<Button>(R.id.button_sudah)
+        btnBelum.setOnClickListener{
+            val intent = Intent(this, BusinessRecommendationActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
+        }
+        btnSudah.setOnClickListener{
+            val intent = Intent(this, BusinessDetailActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
+        }
+        popUpDialog.show()
+        
     }
 
     private fun login() {

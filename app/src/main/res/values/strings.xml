@@ -44,6 +44,10 @@
     <string name="desc_keahlian">(Bisa pilih lebih dari satu)</string>
     <string name="modal_usaha_rekom">Modal usaha</string>
     <string name="konfirmasi_button">Konfirmasi</string>
+    <string name="konfirmasi_punya_usaha">Sudah mempunyai usaha?</string>
+    <string name="sudah_button">Sudah</string>
+    <string name="belum_button">Belum</string>
+    <string name="title_rekom_tipe_umkm">Tipe UMKM anda:</string>
     <string name="login_failed_msg">Gagal Masuk, Salah Email/Password Tidak Valid</string>
     <string-array name="kategori_dropdown_array">
         <item>Kuliner</item>
