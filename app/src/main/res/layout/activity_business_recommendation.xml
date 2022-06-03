@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.recommendation.BusinessRecommendation">
+    tools:context=".ui.recommendation.BusinessRecommendationActivity">
 
     <TextView
         android:id="@+id/tv_title_detail_usaha"
@@ -39,7 +39,8 @@
         android:fontFamily="@font/poppins"
         android:text="@string/pengalaman_bekerja"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/separate_line" />
 
@@ -62,13 +63,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_contoh_kerja">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_pengalaman_kerja"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:background="@drawable/text_view_style" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,7 +84,8 @@
         android:fontFamily="@font/poppins"
         android:text="@string/pilih_bidang_keahlian"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pengalamanKerjaTextInputLayout" />
 
@@ -148,7 +152,8 @@
         android:fontFamily="@font/poppins"
         android:text="@string/hobi"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkbox_kuliner" />
 
@@ -171,13 +176,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_desc_hobi">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_hobi"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:background="@drawable/text_view_style" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -191,7 +198,8 @@
         android:fontFamily="@font/poppins"
         android:text="@string/modal_usaha_rekom"
         android:textColor="@color/black"
-        android:textSize="16sp"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hobiTextInputLayout" />
 
@@ -234,20 +242,23 @@
     </RadioGroup>
 
     <Button
+        android:id="@+id/btn_rekom_konfirm"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/button_style"
         android:fontFamily="@font/poppins"
         android:text="@string/konfirmasi_button"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rg_modal_usaha" />
+        app:layout_constraintTop_toBottomOf="@+id/rg_modal_usaha"
+        app:layout_constraintVertical_bias="0.865" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

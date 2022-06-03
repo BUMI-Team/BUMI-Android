@@ -1,16 +1,21 @@
 package com.dicoding.android.bumi.ui.login
 
+import android.app.Dialog
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.Button
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import com.dicoding.android.bumi.MainActivity
 import com.dicoding.android.bumi.R
 import com.dicoding.android.bumi.databinding.ActivityLoginBinding
+import com.dicoding.android.bumi.ui.recommendation.BusinessDetailActivity
+import com.dicoding.android.bumi.ui.recommendation.BusinessRecommendationActivity
 import com.dicoding.android.bumi.ui.register.RegisterActivity
 
 class LoginActivity : AppCompatActivity() {
@@ -59,10 +64,11 @@ class LoginActivity : AppCompatActivity() {
                     // Login
                     // loginViewModel.login()
                     Toast.makeText(this@LoginActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, MainActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                    startActivity(intent)
-                    finish()
+//                    val intent = Intent(this, PopUpAfterLoginActivity::class.java)
+//                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+//                    startActivity(intent)
+//                    finish()
+                    popUpDialog()
                 }
             }
         }
@@ -70,5 +76,28 @@ class LoginActivity : AppCompatActivity() {
         binding.tvRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
+    }
+
+    private fun popUpDialog() {
+        val popUpDialog = Dialog(this)
+        popUpDialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        popUpDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        popUpDialog.setContentView(R.layout.popup_after_login)
+
+        val btnBelum = popUpDialog.findViewById<Button>(R.id.button_belum)
+        val btnSudah = popUpDialog.findViewById<Button>(R.id.button_sudah)
+        btnBelum.setOnClickListener{
+            val intent = Intent(this, BusinessRecommendationActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
+        }
+        btnSudah.setOnClickListener{
+            val intent = Intent(this, BusinessDetailActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
+        }
+        popUpDialog.show()
     }
 }
