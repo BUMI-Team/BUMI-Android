@@ -7,8 +7,8 @@ import android.os.Bundle
 import android.view.WindowInsets
 import android.view.WindowManager
 import com.dicoding.android.bumi.databinding.ActivityWelcomeBinding
-import com.dicoding.android.bumi.ui.login.LoginActivity
-import com.dicoding.android.bumi.ui.register.RegisterActivity
+import com.dicoding.android.bumi.ui.signin.LoginActivity
+import com.dicoding.android.bumi.ui.signup.SignupActivity
 
 class WelcomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWelcomeBinding
@@ -39,7 +39,7 @@ class WelcomeActivity : AppCompatActivity() {
     // Button
     private fun setupAction() {
         binding.btnSignupEmail.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
+            startActivity(Intent(this, SignupActivity::class.java))
         }
 
         binding.btnSignupGoogle.setOnClickListener {

@@ -1,4 +1,4 @@
-package com.dicoding.android.bumi.ui.register
+package com.dicoding.android.bumi.ui.signup
 
 import android.content.ContentValues
 import android.content.Intent
@@ -13,16 +13,15 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
-import com.dicoding.android.bumi.R
 import com.dicoding.android.bumi.data.model.RegisterResponse
 import com.dicoding.android.bumi.data.remote.ApiConfig
 import com.dicoding.android.bumi.databinding.ActivityRegisterBinding
-import com.dicoding.android.bumi.ui.login.LoginActivity
+import com.dicoding.android.bumi.ui.signin.LoginActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class RegisterActivity : AppCompatActivity() {
+class SignupActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRegisterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -88,11 +87,11 @@ class RegisterActivity : AppCompatActivity() {
                 val responseBody = response.body()
                 if (response.isSuccessful && responseBody != null) {
                     if (responseBody.error == true){
-                        Toast.makeText(this@RegisterActivity, responseBody.message, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@SignupActivity, responseBody.message, Toast.LENGTH_SHORT).show()
                     } else {
                         onLoading(false)
                         // Toast/Alert
-                        AlertDialog.Builder(this@RegisterActivity).apply {
+                        AlertDialog.Builder(this@SignupActivity).apply {
                             setTitle("Sukses!")
                             setMessage("Akun Berhasil dibuat!")
                             setPositiveButton("Ok") { _, _ ->

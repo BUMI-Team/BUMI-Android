@@ -49,6 +49,7 @@
     <string name="belum_button">Belum</string>
     <string name="title_rekom_tipe_umkm">Tipe UMKM anda:</string>
     <string name="login_failed_msg">Gagal Masuk, Salah Email/Password Tidak Valid</string>
+    <string name="greeting">Hello %1$s,</string>
     <string-array name="kategori_dropdown_array">
         <item>Kuliner</item>
         <item>Rumah Tangga</item>
