@@ -1,5 +1,6 @@
 package com.dicoding.android.bumi.data.local.datastore
 
+import android.widget.Toast
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
@@ -29,12 +30,6 @@ class LoginPreferences private constructor(private val dataStore: DataStore<Pref
         }
     }
 
-    // Auth
-    suspend fun login() {
-        dataStore.edit { preferences ->
-            preferences[STATE_KEY] = true
-        }
-    }
     suspend fun logout() {
         dataStore.edit { preferences ->
             preferences[STATE_KEY] = false
