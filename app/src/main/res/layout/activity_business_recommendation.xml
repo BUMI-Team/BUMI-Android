@@ -39,7 +39,7 @@
         android:fontFamily="@font/poppins"
         android:text="@string/pengalaman_bekerja"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/separate_line" />
@@ -52,7 +52,7 @@
         android:layout_marginTop="4dp"
         android:text="@string/contoh_kerja"
         android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_kerja" />
 
@@ -80,11 +80,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins"
         android:text="@string/pilih_bidang_keahlian"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pengalamanKerjaTextInputLayout" />
@@ -97,7 +97,7 @@
         android:layout_marginTop="4dp"
         android:text="@string/desc_keahlian"
         android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_bidang_keahlian" />
 
@@ -148,11 +148,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins"
         android:text="@string/hobi"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkbox_kuliner" />
@@ -165,7 +165,7 @@
         android:layout_marginTop="4dp"
         android:text="@string/desc_hobi"
         android:textColor="@color/black"
-        android:textSize="12sp"
+        android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_hobi" />
 
@@ -194,11 +194,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins"
         android:text="@string/modal_usaha_rekom"
         android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hobiTextInputLayout" />
@@ -259,6 +259,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rg_modal_usaha"
-        app:layout_constraintVertical_bias="0.865" />
+        app:layout_constraintVertical_bias="0.87"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
