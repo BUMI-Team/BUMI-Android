@@ -1,16 +1,13 @@
 package com.dicoding.android.bumi.ui.account
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import com.dicoding.android.bumi.MainActivity
 import com.dicoding.android.bumi.R
 import com.dicoding.android.bumi.databinding.ActivityEditAccountBinding
-import com.dicoding.android.bumi.ui.register.RegisterActivity
 
 class EditAccountActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEditAccountBinding

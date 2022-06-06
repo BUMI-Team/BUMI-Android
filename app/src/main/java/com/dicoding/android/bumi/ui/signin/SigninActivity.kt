@@ -1,4 +1,4 @@
-package com.dicoding.android.bumi.ui.login
+package com.dicoding.android.bumi.ui.signin
 
 import android.app.Dialog
 import android.content.ContentValues
@@ -22,7 +22,6 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
-import com.dicoding.android.bumi.MainActivity
 import com.dicoding.android.bumi.R
 import com.dicoding.android.bumi.data.local.datastore.LoginPreferences
 import com.dicoding.android.bumi.data.local.entity.User
@@ -31,7 +30,7 @@ import com.dicoding.android.bumi.data.remote.ApiConfig
 import com.dicoding.android.bumi.databinding.ActivityLoginBinding
 import com.dicoding.android.bumi.ui.recommendation.BusinessDetailActivity
 import com.dicoding.android.bumi.ui.recommendation.BusinessRecommendationActivity
-import com.dicoding.android.bumi.ui.register.RegisterActivity
+import com.dicoding.android.bumi.ui.signup.SignupActivity
 import com.dicoding.android.bumi.utils.PrefViewModelFactory
 import retrofit2.Call
 import retrofit2.Callback
@@ -41,7 +40,7 @@ private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(na
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
-    private lateinit var loginViewModel: LoginViewModel
+    private lateinit var signinViewModel: SigninViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,10 +67,10 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setupViewModel() {
-        loginViewModel = ViewModelProvider(
+        signinViewModel = ViewModelProvider(
             this,
             PrefViewModelFactory(LoginPreferences.getInstance(dataStore))
-        )[LoginViewModel::class.java]
+        )[SigninViewModel::class.java]
     }
 
     // Login
@@ -99,7 +98,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.tvRegister.setOnClickListener {
-            startActivity(Intent(this, RegisterActivity::class.java))
+            startActivity(Intent(this, SignupActivity::class.java))
         }
     }
 
@@ -138,7 +137,7 @@ class LoginActivity : AppCompatActivity() {
                 val responseBody = response.body()
                 if (response.isSuccessful && responseBody != null) {
                     onLoading(false)
-                    loginViewModel.saveUser(
+                    signinViewModel.saveUser(
                         User(
                             responseBody.displayName,
                             responseBody.stsTokenManager.accessToken,
@@ -146,6 +145,9 @@ class LoginActivity : AppCompatActivity() {
                         )
                     )
                     Toast.makeText(this@LoginActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(this@LoginActivity, responseBody.stsTokenManager.accessToken, Toast.LENGTH_SHORT).show()
+
+
                     popUpDialog()
                 } else {
                     onLoading(false)

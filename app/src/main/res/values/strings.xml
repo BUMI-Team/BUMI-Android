@@ -54,6 +54,7 @@
     <string name="jenis_usaha_konsul">Masukkan jenis usaha anda:</string>
     <string name="pertanyaan_untuk_trainer">Pertanyaan untuk trainer</string>
     <string name="desc_pertanyaan">(masukkan jika sudah punya pertanyaan)</string>
+    <string name="greeting">Hello %1$s,</string>
     <string-array name="kategori_dropdown_array">
         <item>Pilih kategori video</item>
         <item>Kuliner</item>
