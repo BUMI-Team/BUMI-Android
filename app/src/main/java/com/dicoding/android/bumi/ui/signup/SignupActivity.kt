@@ -16,7 +16,7 @@ import androidx.appcompat.app.AlertDialog
 import com.dicoding.android.bumi.data.model.RegisterResponse
 import com.dicoding.android.bumi.data.remote.ApiConfig
 import com.dicoding.android.bumi.databinding.ActivityRegisterBinding
-import com.dicoding.android.bumi.ui.signin.LoginActivity
+import com.dicoding.android.bumi.ui.signin.SigninActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -70,7 +70,7 @@ class SignupActivity : AppCompatActivity() {
         }
 
         binding.tvLogin.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, SigninActivity::class.java))
         }
     }
 

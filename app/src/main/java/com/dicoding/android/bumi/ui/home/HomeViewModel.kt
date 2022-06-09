@@ -1,6 +1,5 @@
 package com.dicoding.android.bumi.ui.home
 
-import android.content.Context
 import androidx.lifecycle.*
 import com.dicoding.android.bumi.data.local.datastore.LoginPreferences
 import com.dicoding.android.bumi.data.local.entity.User

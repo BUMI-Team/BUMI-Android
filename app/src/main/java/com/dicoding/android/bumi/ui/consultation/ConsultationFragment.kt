@@ -13,9 +13,6 @@ import com.dicoding.android.bumi.databinding.FragmentConsultationBinding
 class ConsultationFragment : Fragment() {
 
     private var _binding: FragmentConsultationBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(

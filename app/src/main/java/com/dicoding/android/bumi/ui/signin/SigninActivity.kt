@@ -22,9 +22,11 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
+import com.dicoding.android.bumi.MainActivity
 import com.dicoding.android.bumi.R
 import com.dicoding.android.bumi.data.local.datastore.LoginPreferences
 import com.dicoding.android.bumi.data.local.entity.User
+import com.dicoding.android.bumi.data.local.sharedpref.SharedPreference
 import com.dicoding.android.bumi.data.model.LoginResponse
 import com.dicoding.android.bumi.data.remote.ApiConfig
 import com.dicoding.android.bumi.databinding.ActivityLoginBinding
@@ -38,7 +40,7 @@ import retrofit2.Response
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
-class LoginActivity : AppCompatActivity() {
+class SigninActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var signinViewModel: SigninViewModel
 
@@ -137,23 +139,30 @@ class LoginActivity : AppCompatActivity() {
                 val responseBody = response.body()
                 if (response.isSuccessful && responseBody != null) {
                     onLoading(false)
+                    // DataStore
                     signinViewModel.saveUser(
                         User(
+                            responseBody.uid,
                             responseBody.displayName,
                             responseBody.stsTokenManager.accessToken,
                             true
                         )
                     )
-                    Toast.makeText(this@LoginActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
-//                    Toast.makeText(this@LoginActivity, responseBody.stsTokenManager.accessToken, Toast.LENGTH_SHORT).show()
 
+                    Toast.makeText(this@SigninActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
+
+//                    Toast.makeText(this@LoginActivity, responseBody.stsTokenManager.accessToken, Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@SigninActivity, MainActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(intent)
+                    finish()
 
                     popUpDialog()
 //                    moveToDetail()
                 } else {
                     onLoading(false)
                     Toast.makeText(
-                        this@LoginActivity,
+                        this@SigninActivity,
                         getString(R.string.login_failed_msg),
                         Toast.LENGTH_SHORT
                     ).show()
@@ -163,7 +172,7 @@ class LoginActivity : AppCompatActivity() {
 
             @RequiresApi(Build.VERSION_CODES.R)
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                Toast.makeText(this@LoginActivity, "Error", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SigninActivity, "Error", Toast.LENGTH_SHORT).show()
                 Log.e(ControlsProviderService.TAG, "Failure: ${t.message}")
             }
         })
