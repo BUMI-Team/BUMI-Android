@@ -8,6 +8,7 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.android.bumi.ui.onboarding.OnboardingActivity
+import com.dicoding.android.bumi.ui.signin.LoginActivity
 import com.dicoding.android.bumi.ui.welcome.WelcomeActivity
 
 class SplashActivity : AppCompatActivity() {
@@ -20,8 +21,8 @@ class SplashActivity : AppCompatActivity() {
         Handler().postDelayed({
 //            val intent = Intent(this@SplashActivity, WelcomeActivity::class.java)
 //            val intent = Intent(this@SplashActivity, OnboardingActivity::class.java)
-            val intent = Intent(this@SplashActivity, MainActivity::class.java)
-
+//            val intent = Intent(this@SplashActivity, MainActivity::class.java)
+            val intent = Intent(this@SplashActivity, LoginActivity::class.java)
             startActivity(intent)
         }, 3000)
 

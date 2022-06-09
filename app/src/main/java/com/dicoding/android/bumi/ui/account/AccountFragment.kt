@@ -24,6 +24,7 @@ class AccountFragment : Fragment() {
     ): View {
 
         _binding = FragmentAccountBinding.inflate(inflater, container, false)
+//        accViewModel = ViewModelProvider(this)[AccountViewModel::class.java]
 //        setupAction()
         return binding.root
 
@@ -45,6 +46,7 @@ class AccountFragment : Fragment() {
 
         _binding?.btnLogout?.setOnClickListener {
             val intent = Intent (this@AccountFragment.context, WelcomeActivity::class.java)
+//            accViewModel.logout()
             startActivity(intent)
         }
     }

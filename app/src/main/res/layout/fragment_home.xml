@@ -33,39 +33,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RelativeLayout
-        android:id="@+id/rl_list_video"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_training_video"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@drawable/bg_list_video"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/list_training_video"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_banner_slider"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/category_spinner"
+        tools:listitem="@layout/item_row_video" />
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/list_training_video"
-            android:layout_width="363dp"
-            android:layout_height="476dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="70dp"
-            android:contentDescription="@string/list_training_video"
-            tools:listitem="@layout/item_row_video" />
-
-        <Spinner
-            android:id="@+id/category_spinner"
-            android:layout_width="330dp"
-            android:layout_height="50dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/spinner_style"
-            android:contentDescription="@string/kategori_usaha"
-            android:spinnerMode="dropdown"
-            android:textSize="30sp" />
-
-    </RelativeLayout>
+    <Spinner
+        android:id="@+id/category_spinner"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/spinner_style"
+        android:contentDescription="@string/kategori_usaha"
+        android:spinnerMode="dropdown"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/list_training_video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_banner_slider" />
 </androidx.constraintlayout.widget.ConstraintLayout>

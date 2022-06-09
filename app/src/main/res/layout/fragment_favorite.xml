@@ -15,5 +15,5 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/item_row_fav_video" />
+        tools:listitem="@layout/item_row_video" />
 </androidx.constraintlayout.widget.ConstraintLayout>

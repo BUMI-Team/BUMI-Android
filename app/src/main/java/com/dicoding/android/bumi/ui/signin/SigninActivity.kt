@@ -149,6 +149,7 @@ class LoginActivity : AppCompatActivity() {
 
 
                     popUpDialog()
+//                    moveToDetail()
                 } else {
                     onLoading(false)
                     Toast.makeText(
@@ -167,6 +168,13 @@ class LoginActivity : AppCompatActivity() {
             }
         })
     }
+
+//    private fun moveToDetail() {
+//        val intent = Intent(this, BusinessDetailActivity::class.java)
+//        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+//        startActivity(intent)
+//        finish()
+//    }
 
     // Loading
     private fun onLoading(data: Boolean) {

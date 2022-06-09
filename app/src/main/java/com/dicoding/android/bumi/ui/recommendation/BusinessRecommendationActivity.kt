@@ -11,11 +11,14 @@ import android.view.Window
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.CheckBox
+import android.widget.RadioButton
 import android.widget.Toast
 import com.dicoding.android.bumi.MainActivity
 import com.dicoding.android.bumi.R
 import com.dicoding.android.bumi.databinding.ActivityBusinessRecommendationBinding
 import com.dicoding.android.bumi.databinding.ActivityLoginBinding
+import java.lang.StringBuilder
 
 class BusinessRecommendationActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBusinessRecommendationBinding
@@ -42,16 +45,94 @@ class BusinessRecommendationActivity : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
+    private fun pilihBidangKeahlian(): StringBuilder {
+        val kuliner: CheckBox
+        val rumah_tangga: CheckBox
+        val kesehatan: CheckBox
+        val bidangKeahlian = StringBuilder()
+
+        kuliner = binding.checkboxKuliner
+        rumah_tangga = binding.checkboxRt
+        kesehatan = binding.checkboxKesehatan
+
+        when {
+            kuliner.isChecked && rumah_tangga.isChecked && kesehatan.isChecked -> {
+                bidangKeahlian.append(kuliner.text.toString() + "," + rumah_tangga.text.toString() + "," + kesehatan.text.toString())
+            }
+            kuliner.isChecked && rumah_tangga.isChecked -> {
+                bidangKeahlian.append(kuliner.text.toString() + "," + rumah_tangga.text.toString())
+            }
+            kuliner.isChecked && kesehatan.isChecked -> {
+                bidangKeahlian.append(kuliner.text.toString() + "," + kesehatan.text.toString())
+            }
+            rumah_tangga.isChecked && kesehatan.isChecked -> {
+                bidangKeahlian.append(rumah_tangga.text.toString() + "," + kesehatan.text.toString())
+            }
+            rumah_tangga.isChecked -> {
+                bidangKeahlian.append(rumah_tangga.text.toString())
+            }
+            kesehatan.isChecked -> {
+                bidangKeahlian.append(kesehatan.text.toString())
+            }
+            kuliner.isChecked -> {
+                bidangKeahlian.append(kuliner.text.toString())
+            }
+            else -> {
+                Toast.makeText(this, "Pilih bidang keahlian", Toast.LENGTH_SHORT).show()
+            }
+        }
+        return bidangKeahlian
+    }
+
+    private fun pilihModalUsaha(): StringBuilder {
+        val mikro: RadioButton
+        val kecil: RadioButton
+        val menengah: RadioButton
+
+        mikro = binding.radioMikro
+        kecil = binding.radioKecil
+        menengah = binding.radioMenengah
+        val modalUsaha = StringBuilder()
+
+        if (mikro.isChecked){
+            modalUsaha.append("mikro")
+        }
+        if (kecil.isChecked){
+            modalUsaha.append("kecil")
+        }
+        if (menengah.isChecked){
+            modalUsaha.append("menengah")
+        }
+        return modalUsaha
+    }
+
     private fun setupAction() {
         binding.btnRekomKonfirm.setOnClickListener {
-            val jenisUsaha = binding.etPengalamanKerja.text.toString()
+            val pengalamanKerja = binding.etPengalamanKerja.text.toString()
             val hobi = binding.etHobi.text.toString()
+            val bidangKeahlian = pilihBidangKeahlian()
+            val modalUsaha = pilihModalUsaha()
+
             when {
-                jenisUsaha.isEmpty() -> {
+                pengalamanKerja.isEmpty() -> {
                     binding.pengalamanKerjaTextInputLayout.error = "Masukkan pengalaman kerja anda"
                 }
                 hobi.isEmpty() -> {
                     binding.hobiTextInputLayout.error = "Masukkan hobi anda"
+                }
+                bidangKeahlian.isEmpty() -> {
+                    Toast.makeText(
+                        this@BusinessRecommendationActivity,
+                        "Pilih bidang keahlian",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+                modalUsaha.isEmpty() -> {
+                    Toast.makeText(
+                        this@BusinessRecommendationActivity,
+                        "Pilih modal usaha",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
                 else -> {
                     popUpDialog()
@@ -67,7 +148,7 @@ class BusinessRecommendationActivity : AppCompatActivity() {
         popUpDialog.setContentView(R.layout.popup_hasil_rekomendasi)
 
         val btnKonfirm = popUpDialog.findViewById<Button>(R.id.btn_konfirm_hasil_rekom)
-        btnKonfirm.setOnClickListener{
+        btnKonfirm.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
