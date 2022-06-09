@@ -129,6 +129,7 @@ class AccountFragment : Fragment() {
 //             auth.signOut()
 //            accViewModel.logout()
             val intent = Intent (activity, WelcomeActivity::class.java)
+            
             startActivity(intent)
             Toast.makeText(activity, "Test", Toast.LENGTH_SHORT).show()
             activity?.finish()

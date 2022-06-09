@@ -75,4 +75,15 @@
         app:layout_constraintStart_toStartOf="@+id/detail_desc_title"
         app:layout_constraintTop_toBottomOf="@+id/detail_desc_title" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_training_video"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detail_desc"
+        tools:listitem="@layout/item_row_video" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

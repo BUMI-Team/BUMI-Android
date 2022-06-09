@@ -49,10 +49,28 @@
     <string name="belum_button">Belum</string>
     <string name="title_rekom_tipe_umkm">Tipe UMKM anda:</string>
     <string name="login_failed_msg">Gagal Masuk, Salah Email/Password Tidak Valid</string>
+    <string name="waktu_konsul">Waktu Konsultasi</string>
+    <string name="mentor">Mentor</string>
+    <string name="jenis_usaha_konsul">Masukkan jenis usaha anda:</string>
+    <string name="pertanyaan_untuk_trainer">Pertanyaan untuk trainer</string>
+    <string name="desc_pertanyaan">(masukkan jika sudah punya pertanyaan)</string>
     <string name="greeting">Hello %1$s,</string>
     <string-array name="kategori_dropdown_array">
+        <item>Pilih kategori video</item>
         <item>Kuliner</item>
         <item>Rumah Tangga</item>
         <item>Kesehatan</item>
+    </string-array>
+    <string-array name="mentor_dropdown_array">
+        <item>Pilih mentor</item>
+        <item>Puja Pramudya</item>
+        <item>Ivan Nugraha</item>
+        <item>Muriel Makarim</item>
+    </string-array>
+    <string-array name="waktu_konsul_dropdown_array">
+        <item>Pilih waktu konsultasi</item>
+        <item>Senin, 20 Juni 2022 jam 19.30–19.45</item>
+        <item>Selasa, 21 Juni 2022 jam 17.30–17.45</item>
+        <item>Selasa, 20 Juni 2022 jam 18.30–18.45</item>
     </string-array>
 </resources>

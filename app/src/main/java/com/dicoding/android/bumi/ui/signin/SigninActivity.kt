@@ -157,7 +157,8 @@ class SigninActivity : AppCompatActivity() {
                     startActivity(intent)
                     finish()
 
-//                    popUpDialog()
+                    popUpDialog()
+//                    moveToDetail()
                 } else {
                     onLoading(false)
                     Toast.makeText(
@@ -176,6 +177,13 @@ class SigninActivity : AppCompatActivity() {
             }
         })
     }
+
+//    private fun moveToDetail() {
+//        val intent = Intent(this, BusinessDetailActivity::class.java)
+//        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+//        startActivity(intent)
+//        finish()
+//    }
 
     // Loading
     private fun onLoading(data: Boolean) {
