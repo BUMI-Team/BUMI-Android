@@ -2,13 +2,18 @@ package com.dicoding.android.bumi.ui.welcome
 
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.android.bumi.databinding.ActivityWelcomeBinding
-import com.dicoding.android.bumi.ui.signin.LoginActivity
+import com.dicoding.android.bumi.ui.signin.SigninActivity
 import com.dicoding.android.bumi.ui.signup.SignupActivity
+import com.google.android.gms.common.SignInButton
+
 
 class WelcomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWelcomeBinding
@@ -17,6 +22,8 @@ class WelcomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
 
         setupView()
         setupAction()
@@ -43,11 +50,17 @@ class WelcomeActivity : AppCompatActivity() {
         }
 
         binding.btnSignupGoogle.setOnClickListener {
-            // Firebase Auth TODO
+//            signUp()
+            Toast.makeText(this@WelcomeActivity, "Coming Soon", Toast.LENGTH_SHORT).show()
+
         }
 
         binding.tvLogin.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, SigninActivity::class.java))
         }
+    }
+
+    companion object {
+        private const val TAG = "WelcomeActivity"
     }
 }

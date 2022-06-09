@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.dicoding.android.bumi.databinding.FragmentConsultationBinding
 import com.dicoding.android.bumi.databinding.FragmentFavoriteBinding
+import com.dicoding.android.bumi.ui.consultation.ConsultationViewModel
 
 class FavoriteFragment : Fragment() {
 
@@ -22,16 +24,16 @@ class FavoriteFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(FavoriteViewModel::class.java)
+        val favoritViewModel =
+            ViewModelProvider(this)[ConsultationViewModel::class.java]
 
         _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-//        val textView: TextView = binding.textFavorite
-//        notificationsViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
+        val textView: TextView = binding.textFavorite
+        favoritViewModel.text.observe(viewLifecycleOwner) {
+            textView.text = it
+        }
         return root
     }
 

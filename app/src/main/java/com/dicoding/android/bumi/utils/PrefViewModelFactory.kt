@@ -3,6 +3,7 @@ package com.dicoding.android.bumi.utils
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.dicoding.android.bumi.data.local.datastore.LoginPreferences
+import com.dicoding.android.bumi.ui.account.AccountViewModel
 import com.dicoding.android.bumi.ui.home.HomeViewModel
 import com.dicoding.android.bumi.ui.signin.SigninViewModel
 
@@ -13,6 +14,8 @@ class PrefViewModelFactory(private val pref: LoginPreferences) : ViewModelProvid
         return when {
             modelClass.isAssignableFrom(HomeViewModel::class.java) -> { HomeViewModel(pref) as T }
             modelClass.isAssignableFrom(SigninViewModel::class.java) -> { SigninViewModel(pref) as T }
+//            modelClass.isAssignableFrom(AccountViewModel::class.java) -> { AccountViewModel(pref) as T }
+
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }
     }

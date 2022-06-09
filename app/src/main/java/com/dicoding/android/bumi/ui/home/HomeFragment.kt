@@ -60,26 +60,6 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
-//    private fun setupViewModel() {
-//        var name: String
-//
-//        homeViewModel = ViewModelProvider(this, PrefViewModelFactory(LoginPreferences.getInstance(dataStore)))[HomeViewModel::class.java]
-//        homeViewModel.getUser().observe(viewLifecycleOwner) { user ->
-//            if (user.isLogin) {
-//                Constants.token = " ${user.token}"
-//                name = user.name
-//                binding.apply {
-//                    listTrainingVideo.layoutManager = LinearLayoutManager(context)
-//                    getToken(Constants.token)
-//                }
-//            } else {
-//                val intent = Intent (activity, WelcomeActivity::class.java)
-//                activity?.startActivity(intent)
-//                activity?.finish()
-//            }
-//        }
-//    }
-
     private fun setSpinner() {
         val spinner: Spinner = binding.categorySpinner
         context?.let {
@@ -106,6 +86,28 @@ class HomeFragment : Fragment() {
 
         bannerSlider.setImageList(bannerList, ScaleTypes.FIT)
     }
+
+//    private fun setupViewModel() {
+//        var name: String
+//
+//        homeViewModel = ViewModelProvider(this, PrefViewModelFactory(LoginPreferences.getInstance(dataStore)))[HomeViewModel::class.java]
+//        homeViewModel.getUser().observe(viewLifecycleOwner) { user ->
+//            if (user.isLogin) {
+//                Constants.token = " ${user.token}"
+//                name = user.name
+//                binding.apply {
+//                    listTrainingVideo.layoutManager = LinearLayoutManager(context)
+//                    getToken(Constants.token)
+//                }
+//            } else {
+//                val intent = Intent (activity, WelcomeActivity::class.java)
+//                activity?.startActivity(intent)
+//                activity?.finish()
+//            }
+//        }
+//    }
+
+
 
 //    private fun getToken(token: String) {
 //        binding.apply {
