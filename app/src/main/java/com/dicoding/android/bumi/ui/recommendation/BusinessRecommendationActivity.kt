@@ -95,7 +95,7 @@ class BusinessRecommendationActivity : AppCompatActivity() {
         val modalUsaha = StringBuilder()
 
         if (mikro.isChecked){
-            modalUsaha.append("mikro")
+            modalUsaha.append("under_50")
         }
         if (kecil.isChecked){
             modalUsaha.append("kecil")
