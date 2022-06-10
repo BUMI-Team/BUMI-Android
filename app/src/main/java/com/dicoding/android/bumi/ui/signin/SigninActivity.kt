@@ -1,5 +1,6 @@
 package com.dicoding.android.bumi.ui.signin
 
+import android.app.AlertDialog
 import android.app.Dialog
 import android.content.ContentValues
 import android.content.Context
@@ -9,12 +10,9 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Window
 import android.service.controls.ControlsProviderService
 import android.util.Log
-import android.view.View
-import android.view.WindowInsets
-import android.view.WindowManager
+import android.view.*
 import android.widget.Button
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -104,30 +102,6 @@ class SigninActivity : AppCompatActivity() {
         }
     }
 
-    private fun popUpDialog() {
-        val popUpDialog = Dialog(this)
-        popUpDialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        popUpDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        popUpDialog.setContentView(R.layout.popup_after_login)
-
-        val btnBelum = popUpDialog.findViewById<Button>(R.id.button_belum)
-        val btnSudah = popUpDialog.findViewById<Button>(R.id.button_sudah)
-        btnBelum.setOnClickListener {
-            val intent = Intent(this, BusinessRecommendationActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(intent)
-            finish()
-        }
-        btnSudah.setOnClickListener {
-            val intent = Intent(this, BusinessDetailActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(intent)
-            finish()
-        }
-        popUpDialog.show()
-
-    }
-
     private fun login() {
         onLoading(true)
         val client = ApiConfig.getApiService().login(
@@ -152,13 +126,12 @@ class SigninActivity : AppCompatActivity() {
                     Toast.makeText(this@SigninActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
 
 //                    Toast.makeText(this@LoginActivity, responseBody.stsTokenManager.accessToken, Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this@SigninActivity, MainActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                    startActivity(intent)
-                    finish()
+//                    val intent = Intent(this@SigninActivity, MainActivity::class.java)
+//                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+//                    startActivity(intent)
 
                     popUpDialog()
-//                    moveToDetail()
+//                    finish()
                 } else {
                     onLoading(false)
                     Toast.makeText(
@@ -178,12 +151,31 @@ class SigninActivity : AppCompatActivity() {
         })
     }
 
-//    private fun moveToDetail() {
-//        val intent = Intent(this, BusinessDetailActivity::class.java)
-//        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-//        startActivity(intent)
-//        finish()
-//    }
+    private fun popUpDialog() {
+        val popUpDialog = Dialog(this)
+        popUpDialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        popUpDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        popUpDialog.setContentView(R.layout.popup_after_login)
+        popUpDialog.show()
+
+        val btnBelum = popUpDialog.findViewById<Button>(R.id.button_belum)
+        val btnSudah = popUpDialog.findViewById<Button>(R.id.button_sudah)
+        btnBelum.setOnClickListener {
+            popUpDialog.dismiss()
+            val intent = Intent(this, BusinessRecommendationActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
+        }
+        btnSudah.setOnClickListener {
+            popUpDialog.dismiss()
+            val intent = Intent(this, BusinessDetailActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
+        }
+    }
+
 
     // Loading
     private fun onLoading(data: Boolean) {
