@@ -122,16 +122,18 @@ class SigninActivity : AppCompatActivity() {
                             true
                         )
                     )
-
+                    saveState()
                     Toast.makeText(this@SigninActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
-
-//                    Toast.makeText(this@LoginActivity, responseBody.stsTokenManager.accessToken, Toast.LENGTH_SHORT).show()
-//                    val intent = Intent(this@SigninActivity, MainActivity::class.java)
-//                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-//                    startActivity(intent)
-
-                    popUpDialog()
-//                    finish()
+                    val sharedPreference = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+                    val savedPopUpState = sharedPreference.getBoolean("BOOLEAN_KEY_POPUP", false)
+                    if (!savedPopUpState) {
+                        popUpDialog()
+                    } else {
+                        val intent = Intent(this@SigninActivity, MainActivity::class.java)
+                        intent.flags =
+                            Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                        startActivity(intent)
+                    }
                 } else {
                     onLoading(false)
                     Toast.makeText(
@@ -180,5 +182,13 @@ class SigninActivity : AppCompatActivity() {
     // Loading
     private fun onLoading(data: Boolean) {
         binding.progressBar.visibility = if (data) View.VISIBLE else View.INVISIBLE
+    }
+
+    private fun saveState() {
+        val sharedPreference = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreference.edit()
+        editor.apply {
+            putString("STRING_KEY", "login")
+        }.apply()
     }
 }

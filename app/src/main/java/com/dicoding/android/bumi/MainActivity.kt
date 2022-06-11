@@ -68,8 +68,8 @@ class MainActivity : AppCompatActivity() {
         // Home ViewModel
         var name: String
         homeViewModel.getUser().observe(this) { user ->
-            if (user.isLogin) {
-                Constants.token = "Bearer ${user.token}"
+//            if (user.isLogin) {
+                token = "Bearer ${user.token}"
                 name = user.name
                 Constants.EXTRA_UID = user.uid
 
@@ -82,13 +82,13 @@ class MainActivity : AppCompatActivity() {
                 binding.apply {
 //                    val listVideo = rv.findViewById<RecyclerView>(R.id.list_training_video)
 //                    listVideo.layoutManager = LinearLayoutManager(this@MainActivity)
-                    getToken(Constants.token)
+                    getToken(token)
                 }
 //                finish()
-            } else {
-                startActivity(Intent(this, WelcomeActivity::class.java))
-                finish()
-            }
+//            } else {
+//                startActivity(Intent(this, WelcomeActivity::class.java))
+//                finish()
+//            }
         }
     }
 

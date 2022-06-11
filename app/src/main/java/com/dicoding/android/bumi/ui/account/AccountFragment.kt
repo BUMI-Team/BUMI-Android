@@ -14,7 +14,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.Fragment
-import org.koin.androidx.viewmodel.ext.android.viewModel
+//import org.koin.androidx.viewmodel.ext.android.viewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.dicoding.android.bumi.MainViewModel
@@ -23,11 +23,12 @@ import com.dicoding.android.bumi.data.local.datastore.LoginPreferences
 import com.dicoding.android.bumi.databinding.FragmentAccountBinding
 import com.dicoding.android.bumi.ui.welcome.WelcomeActivity
 import com.dicoding.android.bumi.utils.Constants
-import com.dicoding.android.bumi.utils.PrefViewModelFactory
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
-import kotlinx.coroutines.launch
+
+//import com.dicoding.android.bumi.utils.PrefViewModelFactory
+//import com.google.firebase.auth.FirebaseAuth
+//import com.google.firebase.auth.ktx.auth
+//import com.google.firebase.ktx.Firebase
+//import kotlinx.coroutines.launch
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
@@ -35,7 +36,7 @@ class AccountFragment : Fragment() {
     private var _binding: FragmentAccountBinding? = null
 
     // gatau pake yg mana masi coba2
-    private val viewModel: AccountViewModel by viewModel()
+//    private val viewModel: AccountViewModel by viewModel()
     private lateinit var accViewModel: AccountViewModel
 
 //    val pref = requireContext().dataStore
@@ -116,23 +117,34 @@ class AccountFragment : Fragment() {
 //        }
 
         _binding?.btnEditProfil?.setOnClickListener {
-            val intent = Intent (this@AccountFragment.context, EditAccountActivity::class.java)
+            val intent = Intent(this@AccountFragment.context, EditAccountActivity::class.java)
             startActivity(intent)
         }
 
         _binding?.btnConsultationAgenda?.setOnClickListener {
-            val intent = Intent(this@AccountFragment.context, ConsultationAgendaActivity::class.java)
+            val intent =
+                Intent(this@AccountFragment.context, ConsultationAgendaActivity::class.java)
             startActivity(intent)
         }
 
         _binding?.btnLogout?.setOnClickListener {
-//             auth.signOut()
-//            accViewModel.logout()
-            val intent = Intent (activity, WelcomeActivity::class.java)
-            
+////             auth.signOut()
+////            accViewModel.logout()
+//
+//
+
+            saveState()
+            val intent = Intent(activity, WelcomeActivity::class.java)
             startActivity(intent)
-            Toast.makeText(activity, "Test", Toast.LENGTH_SHORT).show()
             activity?.finish()
         }
+    }
+
+    private fun saveState() {
+        val sharedPreference = activity?.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreference?.edit()
+        editor?.apply {
+            putString("STRING_KEY", "logout")
+        }?.apply()
     }
 }
