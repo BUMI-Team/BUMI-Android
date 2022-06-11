@@ -24,10 +24,9 @@ import com.dicoding.android.bumi.MainActivity
 import com.dicoding.android.bumi.R
 import com.dicoding.android.bumi.data.local.datastore.LoginPreferences
 import com.dicoding.android.bumi.data.local.entity.User
-import com.dicoding.android.bumi.data.local.sharedpref.SharedPreference
 import com.dicoding.android.bumi.data.model.LoginResponse
 import com.dicoding.android.bumi.data.remote.ApiConfig
-import com.dicoding.android.bumi.databinding.ActivityLoginBinding
+import com.dicoding.android.bumi.databinding.ActivitySigninBinding
 import com.dicoding.android.bumi.ui.recommendation.BusinessDetailActivity
 import com.dicoding.android.bumi.ui.recommendation.BusinessRecommendationActivity
 import com.dicoding.android.bumi.ui.signup.SignupActivity
@@ -39,12 +38,12 @@ import retrofit2.Response
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
 class SigninActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityLoginBinding
+    private lateinit var binding: ActivitySigninBinding
     private lateinit var signinViewModel: SigninViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+        binding = ActivitySigninBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupView()
@@ -85,12 +84,6 @@ class SigninActivity : AppCompatActivity() {
                 password.isEmpty() -> {
                     binding.etlPassword.error = "Masukkan password"
                 }
-//                email != user.email -> {
-//                    binding.etlEmail.error = "Email tidak sesuai"
-//                }
-//                password != user.password -> {
-//                    binding.etlPassword.error = "Password tidak sesuai"
-//                }
                 else -> {
                     login()
                 }
@@ -116,14 +109,15 @@ class SigninActivity : AppCompatActivity() {
                     // DataStore
                     signinViewModel.saveUser(
                         User(
-                            responseBody.uid,
-                            responseBody.displayName,
-                            responseBody.stsTokenManager.accessToken,
+                            responseBody.userCredential.uid,
+                            responseBody.userCredential.displayName,
+                            responseBody.userCredential.stsTokenManager.accessToken,
                             true
                         )
                     )
                     saveState()
                     Toast.makeText(this@SigninActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
+                    
                     val sharedPreference = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
                     val savedPopUpState = sharedPreference.getBoolean("BOOLEAN_KEY_POPUP", false)
                     if (!savedPopUpState) {
@@ -152,7 +146,7 @@ class SigninActivity : AppCompatActivity() {
             }
         })
     }
-
+    
     private fun popUpDialog() {
         val popUpDialog = Dialog(this)
         popUpDialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -177,7 +171,6 @@ class SigninActivity : AppCompatActivity() {
             finish()
         }
     }
-
 
     // Loading
     private fun onLoading(data: Boolean) {

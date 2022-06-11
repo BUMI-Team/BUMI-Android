@@ -4,17 +4,10 @@ import android.app.Dialog
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
-import android.view.View
-import android.view.Window
-import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -25,15 +18,13 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.dicoding.android.bumi.data.local.datastore.LoginPreferences
-import com.dicoding.android.bumi.data.local.sharedpref.SharedPreference
 import com.dicoding.android.bumi.databinding.ActivityMainBinding
-import com.dicoding.android.bumi.ui.account.AccountViewModel
 import com.dicoding.android.bumi.ui.home.HomeViewModel
-import com.dicoding.android.bumi.ui.recommendation.BusinessRecommendationActivity
 import com.dicoding.android.bumi.ui.welcome.WelcomeActivity
 import com.dicoding.android.bumi.utils.Constants
 import com.dicoding.android.bumi.utils.Constants.token
 import com.dicoding.android.bumi.utils.PrefViewModelFactory
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
@@ -62,7 +53,6 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
 
         // Home ViewModel
         homeViewModel = ViewModelProvider(

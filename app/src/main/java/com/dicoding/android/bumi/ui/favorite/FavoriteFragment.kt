@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.dicoding.android.bumi.databinding.FragmentConsultationBinding
 import com.dicoding.android.bumi.databinding.FragmentFavoriteBinding
 import com.dicoding.android.bumi.ui.consultation.ConsultationViewModel
 
@@ -15,8 +14,6 @@ class FavoriteFragment : Fragment() {
 
     private var _binding: FragmentFavoriteBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(

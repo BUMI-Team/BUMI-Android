@@ -4,6 +4,15 @@ import com.google.gson.annotations.SerializedName
 
 data class LoginResponse(
 
+    @field:SerializedName("code")
+    val code: Int,
+
+    @field:SerializedName("userCredential")
+    val userCredential: UserCredential
+)
+
+data class UserCredential(
+
     @field:SerializedName("uid")
     val uid: String,
 
@@ -38,18 +47,6 @@ data class LoginResponse(
     val email: String
 )
 
-data class StsTokenManager(
-
-    @field:SerializedName("expirationTime")
-    val expirationTime: Long,
-
-    @field:SerializedName("accessToken")
-    val accessToken: String,
-
-    @field:SerializedName("refreshToken")
-    val refreshToken: String
-)
-
 data class ProviderDataItem(
 
     @field:SerializedName("uid")
@@ -69,4 +66,16 @@ data class ProviderDataItem(
 
     @field:SerializedName("email")
     val email: String
+)
+
+data class StsTokenManager(
+
+    @field:SerializedName("expirationTime")
+    val expirationTime: Long,
+
+    @field:SerializedName("accessToken")
+    val accessToken: String,
+
+    @field:SerializedName("refreshToken")
+    val refreshToken: String
 )

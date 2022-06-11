@@ -5,14 +5,12 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.CheckBox
 import android.widget.RadioButton
 import android.widget.Toast
 import com.dicoding.android.bumi.MainActivity
-import com.dicoding.android.bumi.R
 import com.dicoding.android.bumi.databinding.ActivityBusinessDetailBinding
 import java.lang.StringBuilder
 
@@ -81,13 +79,9 @@ class BusinessDetailActivity : AppCompatActivity() {
     }
 
     private fun pilihModalUsaha(): StringBuilder {
-        val mikro: RadioButton
-        val kecil: RadioButton
-        val menengah: RadioButton
-
-        mikro = binding.radioMikro
-        kecil = binding.radioKecil
-        menengah = binding.radioMenengah
+        val mikro: RadioButton = binding.radioMikro
+        val kecil: RadioButton = binding.radioKecil
+        val menengah: RadioButton = binding.radioMenengah
         val modalUsaha = StringBuilder()
 
         if (mikro.isChecked){

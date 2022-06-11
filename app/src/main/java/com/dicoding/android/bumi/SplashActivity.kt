@@ -42,9 +42,7 @@ class SplashActivity : AppCompatActivity() {
 //            val intent = Intent(this@SplashActivity, MainActivity::class.java)
 //            val intent = Intent(this@SplashActivity, SigninActivity::class.java)
 //            startActivity(intent)
-
         }, 3000)
-
         setupView()
     }
 
