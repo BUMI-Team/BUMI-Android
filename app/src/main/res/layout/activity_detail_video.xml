@@ -58,6 +58,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:text="@string/video_description"
+        android:fontFamily="@font/poppins"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold"
@@ -75,6 +76,20 @@
         app:layout_constraintStart_toStartOf="@+id/detail_desc_title"
         app:layout_constraintTop_toBottomOf="@+id/detail_desc_title" />
 
+    <TextView
+        android:id="@+id/title_rekom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Rekomendasi Video"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/detail_desc"
+        app:layout_constraintTop_toBottomOf="@+id/detail_desc" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_training_video"
         android:layout_width="0dp"
@@ -83,7 +98,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail_desc"
+        app:layout_constraintTop_toBottomOf="@+id/title_rekom"
         tools:listitem="@layout/item_row_video" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

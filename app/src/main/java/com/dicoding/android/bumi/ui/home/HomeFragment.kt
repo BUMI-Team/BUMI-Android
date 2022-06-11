@@ -53,7 +53,7 @@ class HomeFragment : Fragment() {
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 val selectedItem = parent?.getItemAtPosition(position)
-                Toast.makeText(activity, "$selectedItem Selected", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(activity, "$selectedItem Selected", Toast.LENGTH_SHORT).show()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {

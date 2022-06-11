@@ -1,5 +1,6 @@
 package com.dicoding.android.bumi.ui.signin
 
+import android.app.AlertDialog
 import android.app.Dialog
 import android.content.ContentValues
 import android.content.Context
@@ -9,12 +10,9 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Window
 import android.service.controls.ControlsProviderService
 import android.util.Log
-import android.view.View
-import android.view.WindowInsets
-import android.view.WindowManager
+import android.view.*
 import android.widget.Button
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -97,30 +95,6 @@ class SigninActivity : AppCompatActivity() {
         }
     }
 
-    private fun popUpDialog() {
-        val popUpDialog = Dialog(this)
-        popUpDialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        popUpDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        popUpDialog.setContentView(R.layout.popup_after_login)
-
-        val btnBelum = popUpDialog.findViewById<Button>(R.id.button_belum)
-        val btnSudah = popUpDialog.findViewById<Button>(R.id.button_sudah)
-        btnBelum.setOnClickListener {
-            val intent = Intent(this, BusinessRecommendationActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(intent)
-            finish()
-        }
-        btnSudah.setOnClickListener {
-            val intent = Intent(this, BusinessDetailActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-            startActivity(intent)
-            finish()
-        }
-        popUpDialog.show()
-
-    }
-
     private fun login() {
         onLoading(true)
         val client = ApiConfig.getApiService().login(
@@ -141,16 +115,19 @@ class SigninActivity : AppCompatActivity() {
                             true
                         )
                     )
-
+                    saveState()
                     Toast.makeText(this@SigninActivity, "Login Berhasil", Toast.LENGTH_SHORT).show()
-
-                    val intent = Intent(this@SigninActivity, MainActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                    startActivity(intent)
-                    finish()
-
-                    popUpDialog()
-//                    moveToDetail()
+                    
+                    val sharedPreference = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+                    val savedPopUpState = sharedPreference.getBoolean("BOOLEAN_KEY_POPUP", false)
+                    if (!savedPopUpState) {
+                        popUpDialog()
+                    } else {
+                        val intent = Intent(this@SigninActivity, MainActivity::class.java)
+                        intent.flags =
+                            Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                        startActivity(intent)
+                    }
                 } else {
                     onLoading(false)
                     Toast.makeText(
@@ -169,9 +146,42 @@ class SigninActivity : AppCompatActivity() {
             }
         })
     }
+    
+    private fun popUpDialog() {
+        val popUpDialog = Dialog(this)
+        popUpDialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        popUpDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        popUpDialog.setContentView(R.layout.popup_after_login)
+        popUpDialog.show()
+
+        val btnBelum = popUpDialog.findViewById<Button>(R.id.button_belum)
+        val btnSudah = popUpDialog.findViewById<Button>(R.id.button_sudah)
+        btnBelum.setOnClickListener {
+            popUpDialog.dismiss()
+            val intent = Intent(this, BusinessRecommendationActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
+        }
+        btnSudah.setOnClickListener {
+            popUpDialog.dismiss()
+            val intent = Intent(this, BusinessDetailActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+            finish()
+        }
+    }
 
     // Loading
     private fun onLoading(data: Boolean) {
         binding.progressBar.visibility = if (data) View.VISIBLE else View.INVISIBLE
+    }
+
+    private fun saveState() {
+        val sharedPreference = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreference.edit()
+        editor.apply {
+            putString("STRING_KEY", "login")
+        }.apply()
     }
 }

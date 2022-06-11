@@ -1,6 +1,7 @@
 package com.dicoding.android.bumi.ui.recommendation
 
 import android.app.Dialog
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -87,7 +88,7 @@ class BusinessRecommendationActivity : AppCompatActivity() {
         val modalUsaha = StringBuilder()
 
         if (mikro.isChecked){
-            modalUsaha.append("mikro")
+            modalUsaha.append("under_50")
         }
         if (kecil.isChecked){
             modalUsaha.append("kecil")
@@ -127,6 +128,7 @@ class BusinessRecommendationActivity : AppCompatActivity() {
                     ).show()
                 }
                 else -> {
+                    saveState()
                     popUpDialog()
                 }
             }
@@ -147,5 +149,13 @@ class BusinessRecommendationActivity : AppCompatActivity() {
             finish()
         }
         popUpDialog.show()
+    }
+
+    private fun saveState(){
+        val sharedPreference = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreference.edit()
+        editor.apply {
+            putBoolean("BOOLEAN_KEY_POPUP", true)
+        }.apply()
     }
 }

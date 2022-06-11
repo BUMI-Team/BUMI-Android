@@ -1,8 +1,11 @@
 package com.dicoding.android.bumi
 
+import android.app.Dialog
+import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -52,26 +55,36 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         // Home ViewModel
-        homeViewModel = ViewModelProvider(this, PrefViewModelFactory(LoginPreferences.getInstance(dataStore)))[HomeViewModel::class.java]
+        homeViewModel = ViewModelProvider(
+            this,
+            PrefViewModelFactory(LoginPreferences.getInstance(dataStore))
+        )[HomeViewModel::class.java]
 
         // Home ViewModel
         var name: String
         homeViewModel.getUser().observe(this) { user ->
-            if (user.isLogin) {
-                token = "Bearer ${user.token}"
-                name = user.name
-                Constants.EXTRA_UID = user.uid
+//            if (user.isLogin) {
+            token = "Bearer ${user.token}"
+            name = user.name
+            Constants.EXTRA_UID = user.uid
 
-                binding.apply {
+//                startActivity(Intent(this, MainActivity::class.java))
+
+            // Test
+            Toast.makeText(this@MainActivity, token, Toast.LENGTH_SHORT).show()
+            Log.e(ContentValues.TAG, "Token: $token")
+            Toast.makeText(this@MainActivity, user.uid, Toast.LENGTH_SHORT).show()
+
+            binding.apply {
 //                    val listVideo = rv.findViewById<RecyclerView>(R.id.list_training_video)
 //                    listVideo.layoutManager = LinearLayoutManager(this@MainActivity)
-                    getToken(token)
-                }
-//                finish()
-            } else {
-                startActivity(Intent(this, WelcomeActivity::class.java))
-                finish()
+                getToken(token)
             }
+//                finish()
+//            } else {
+//                startActivity(Intent(this, WelcomeActivity::class.java))
+//                finish()
+//            }
         }
     }
 

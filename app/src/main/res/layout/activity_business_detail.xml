@@ -1,258 +1,264 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.recommendation.BusinessDetailActivity">
 
-    <TextView
-        android:id="@+id/tv_title_detail_usaha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/title_business_detail"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/separate_line"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/underline"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_detail_usaha"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <TextView
-        android:id="@+id/tv_usaha"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/jenis_usaha"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/separate_line" />
+        tools:context=".ui.recommendation.BusinessDetailActivity">
 
-    <TextView
-        android:id="@+id/tv_contoh_usaha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/contoh_jenis_usaha"
-        android:textColor="@color/black"
-        android:textSize="13sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_usaha" />
+        <TextView
+            android:id="@+id/tv_title_detail_usaha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/title_business_detail"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/jenisUsahaTextInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="376dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_contoh_usaha">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_jenis_usaha"
+        <View
+            android:id="@+id/separate_line"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:background="@drawable/text_view_style" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/underline"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_detail_usaha"
+            tools:layout_editor_absoluteX="0dp" />
 
-    <TextView
-        android:id="@+id/tv_bidang_keahlian"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/pilih_bidang_keahlian"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jenisUsahaTextInputLayout" />
+        <TextView
+            android:id="@+id/tv_usaha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/jenis_usaha"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/separate_line" />
 
-    <TextView
-        android:id="@+id/tv_desc_keahlian"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/desc_keahlian"
-        android:textColor="@color/black"
-        android:textSize="13sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_bidang_keahlian" />
+        <TextView
+            android:id="@+id/tv_contoh_usaha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/contoh_jenis_usaha"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_usaha" />
 
-    <CheckBox
-        android:id="@+id/checkbox_kuliner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/kuliner"
-        android:textColor="@color/black"
-        android:textSize="13sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_desc_keahlian" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/jenisUsahaTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_contoh_usaha">
 
-    <CheckBox
-        android:id="@+id/checkbox_rt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/rumahTangga"
-        android:textColor="@color/black"
-        android:textSize="13sp"
-        app:layout_constraintStart_toEndOf="@+id/checkbox_kuliner"
-        app:layout_constraintTop_toBottomOf="@+id/tv_desc_keahlian" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_jenis_usaha"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/text_view_style" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <CheckBox
-        android:id="@+id/checkbox_kesehatan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="24dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/kesehatan"
-        android:textColor="@color/black"
-        android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_desc_keahlian" />
+        <TextView
+            android:id="@+id/tv_bidang_keahlian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/pilih_bidang_keahlian"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jenisUsahaTextInputLayout" />
 
-    <TextView
-        android:id="@+id/tv_hobi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/hobi"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_kuliner" />
+        <TextView
+            android:id="@+id/tv_desc_keahlian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/desc_keahlian"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bidang_keahlian" />
 
-    <TextView
-        android:id="@+id/tv_desc_hobi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/desc_hobi"
-        android:textColor="@color/black"
-        android:textSize="13sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_hobi" />
+        <CheckBox
+            android:id="@+id/checkbox_kuliner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/kuliner"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc_keahlian" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/hobiTextInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="376dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_desc_hobi">
+        <CheckBox
+            android:id="@+id/checkbox_rt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/rumahTangga"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/checkbox_kuliner"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc_keahlian" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_hobi"
+        <CheckBox
+            android:id="@+id/checkbox_kesehatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/kesehatan"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc_keahlian" />
+
+        <TextView
+            android:id="@+id/tv_hobi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/hobi"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkbox_kuliner" />
+
+        <TextView
+            android:id="@+id/tv_desc_hobi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/desc_hobi"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hobi" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/hobiTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc_hobi">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_hobi"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/text_view_style" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_modal_usaha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/modal_usaha"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hobiTextInputLayout" />
+
+        <RadioGroup
+            android:id="@+id/rg_modal_usaha"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:background="@drawable/text_view_style" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btn_detail_konfirm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_modal_usaha">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <RadioButton
+                android:id="@+id/radio_mikro"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/usaha_mikro"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
 
-    <TextView
-        android:id="@+id/tv_modal_usaha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/modal_usaha"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hobiTextInputLayout" />
+            <RadioButton
+                android:id="@+id/radio_kecil"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/usaha_kecil"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
 
-    <RadioGroup
-        android:id="@+id/rg_modal_usaha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_modal_usaha">
+            <RadioButton
+                android:id="@+id/radio_menengah"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="@string/usaha_menengah"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+        </RadioGroup>
 
-        <RadioButton
-            android:id="@+id/radio_mikro"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="@string/usaha_mikro"
-            android:textColor="@color/black"
-            android:textSize="13sp" />
+        <Button
+            android:id="@+id/btn_detail_konfirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/button_style"
+            android:fontFamily="@font/poppins"
+            android:text="@string/konfirmasi_button"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rg_modal_usaha" />
 
-        <RadioButton
-            android:id="@+id/radio_kecil"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="@string/usaha_kecil"
-            android:textColor="@color/black"
-            android:textSize="13sp" />
-
-        <RadioButton
-            android:id="@+id/radio_menengah"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:text="@string/usaha_menengah"
-            android:textColor="@color/black"
-            android:textSize="13sp" />
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/btn_detail_konfirm"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/button_style"
-        android:fontFamily="@font/poppins"
-        android:text="@string/konfirmasi_button"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rg_modal_usaha"
-        app:layout_constraintVertical_bias="0.87" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

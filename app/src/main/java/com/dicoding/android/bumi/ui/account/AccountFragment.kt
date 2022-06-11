@@ -10,17 +10,16 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.Fragment
-import org.koin.androidx.viewmodel.ext.android.viewModel
 import androidx.lifecycle.ViewModelProvider
 import com.dicoding.android.bumi.databinding.FragmentAccountBinding
 import com.dicoding.android.bumi.ui.welcome.WelcomeActivity
 import com.dicoding.android.bumi.utils.Constants
 
+private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
+
 class AccountFragment : Fragment() {
     private var _binding: FragmentAccountBinding? = null
-
     private lateinit var accViewModel: AccountViewModel
-
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -30,6 +29,7 @@ class AccountFragment : Fragment() {
 
         _binding = FragmentAccountBinding.inflate(inflater, container, false)
         accViewModel = ViewModelProvider(this)[AccountViewModel::class.java]
+//        Toast.makeText(activity,Constants.token,Toast.LENGTH_SHORT).show()
 
         accViewModel.getUser(Constants.token)
         accViewModel.setUser().observe(viewLifecycleOwner) {
@@ -55,23 +55,28 @@ class AccountFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         _binding?.btnEditProfil?.setOnClickListener {
-            val intent = Intent (this@AccountFragment.context, EditAccountActivity::class.java)
+            val intent = Intent(this@AccountFragment.context, EditAccountActivity::class.java)
             startActivity(intent)
         }
 
         _binding?.btnConsultationAgenda?.setOnClickListener {
-            val intent = Intent(this@AccountFragment.context, ConsultationAgendaActivity::class.java)
+            val intent =
+                Intent(this@AccountFragment.context, ConsultationAgendaActivity::class.java)
             startActivity(intent)
         }
 
         _binding?.btnLogout?.setOnClickListener {
-            val intent = Intent (activity, WelcomeActivity::class.java)
+            saveState()
+            val intent = Intent(activity, WelcomeActivity::class.java)
             startActivity(intent)
             activity?.finish()
         }
     }
-
-    companion object {
-        private const val TAG = "AccountFragment"
+    private fun saveState() {
+        val sharedPreference = activity?.getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreference?.edit()
+        editor?.apply {
+            putString("STRING_KEY", "logout")
+        }?.apply()
     }
 }
