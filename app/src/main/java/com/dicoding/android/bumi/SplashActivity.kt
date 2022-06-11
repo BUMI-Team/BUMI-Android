@@ -1,5 +1,6 @@
 package com.dicoding.android.bumi
 
+import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -19,11 +20,29 @@ class SplashActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
         Handler().postDelayed({
+            val sharedPreference = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+            val savedLoginState = sharedPreference.getString("STRING_KEY", "onboarding")
+            when (savedLoginState) {
+                "onboarding" -> {
+                    val intent = Intent(this@SplashActivity, OnboardingActivity::class.java)
+                    startActivity(intent)
+                }
+                "login" -> {
+                    val intent = Intent(this@SplashActivity, MainActivity::class.java)
+                    startActivity(intent)
+                }
+                else -> {
+                    val intent = Intent(this@SplashActivity, WelcomeActivity::class.java)
+                    startActivity(intent)
+                }
+            }
 //            val intent = Intent(this@SplashActivity, WelcomeActivity::class.java)
 //            val intent = Intent(this@SplashActivity, OnboardingActivity::class.java)
+
 //            val intent = Intent(this@SplashActivity, MainActivity::class.java)
-            val intent = Intent(this@SplashActivity, SigninActivity::class.java)
-            startActivity(intent)
+//            val intent = Intent(this@SplashActivity, SigninActivity::class.java)
+//            startActivity(intent)
+
         }, 3000)
 
         setupView()

@@ -1,5 +1,6 @@
 package com.dicoding.android.bumi.ui.recommendation
 
+import android.content.Context
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -134,6 +135,7 @@ class BusinessDetailActivity : AppCompatActivity() {
                         modalUsaha,
                         Toast.LENGTH_SHORT
                     ).show()
+                    saveState()
                     val intent = Intent(this, MainActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                     startActivity(intent)
@@ -142,5 +144,13 @@ class BusinessDetailActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    private fun saveState(){
+        val sharedPreference = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreference.edit()
+        editor.apply {
+            putBoolean("BOOLEAN_KEY_POPUP", true)
+        }.apply()
     }
 }
