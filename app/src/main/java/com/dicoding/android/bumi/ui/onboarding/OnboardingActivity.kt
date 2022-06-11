@@ -103,8 +103,7 @@ class OnboardingActivity : AppCompatActivity() {
     private fun savePrefData(){
         sharedPreferences = applicationContext.getSharedPreferences("pref", Context.MODE_PRIVATE)
         val editor = sharedPreferences!!.edit()
-//        editor.putBoolean("isFirstTimeRun", true)
-        editor.putBoolean("isFirstTimeRun", false)
+        editor.putBoolean("isFirstTimeRun", true)
         editor.apply()
     }
 

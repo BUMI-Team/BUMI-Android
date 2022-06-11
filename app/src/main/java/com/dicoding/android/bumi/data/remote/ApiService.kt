@@ -1,6 +1,5 @@
 package com.dicoding.android.bumi.data.remote
 
-import com.dicoding.android.bumi.data.local.entity.User
 import com.dicoding.android.bumi.data.model.*
 import retrofit2.Call
 import retrofit2.http.*
@@ -24,9 +23,17 @@ interface ApiService {
     ): Call<LoginResponse>
 
     // Get User
-    @GET("api/user/{uid}")
+    @GET("api/user")
     fun getUser(
+        @Header("Authorization") authToken: String
+    ): Call<UserResponse>
+
+    // Update Profile User
+    @FormUrlEncoded
+    @PATCH("api/user")
+    fun updateUser(
         @Header("Authorization") authToken: String,
-        @Path("uid") uid: String
+        @Field("displayName") name: String,
+        @Field("email") email: String
     ): Call<UserResponse>
 }

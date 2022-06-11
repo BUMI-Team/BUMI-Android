@@ -15,18 +15,18 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import com.dicoding.android.bumi.data.model.RegisterResponse
 import com.dicoding.android.bumi.data.remote.ApiConfig
-import com.dicoding.android.bumi.databinding.ActivityRegisterBinding
+import com.dicoding.android.bumi.databinding.ActivitySignupBinding
 import com.dicoding.android.bumi.ui.signin.SigninActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class SignupActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityRegisterBinding
+    private lateinit var binding: ActivitySignupBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityRegisterBinding.inflate(layoutInflater)
+        binding = ActivitySignupBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupView()

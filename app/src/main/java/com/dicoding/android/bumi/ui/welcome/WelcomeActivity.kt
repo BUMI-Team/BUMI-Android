@@ -23,8 +23,6 @@ class WelcomeActivity : AppCompatActivity() {
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
         setupView()
         setupAction()
     }
@@ -52,7 +50,6 @@ class WelcomeActivity : AppCompatActivity() {
         binding.btnSignupGoogle.setOnClickListener {
 //            signUp()
             Toast.makeText(this@WelcomeActivity, "Coming Soon", Toast.LENGTH_SHORT).show()
-
         }
 
         binding.tvLogin.setOnClickListener {

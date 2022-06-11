@@ -14,8 +14,6 @@ class PrefViewModelFactory(private val pref: LoginPreferences) : ViewModelProvid
         return when {
             modelClass.isAssignableFrom(HomeViewModel::class.java) -> { HomeViewModel(pref) as T }
             modelClass.isAssignableFrom(SigninViewModel::class.java) -> { SigninViewModel(pref) as T }
-//            modelClass.isAssignableFrom(AccountViewModel::class.java) -> { AccountViewModel(pref) as T }
-
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }
     }

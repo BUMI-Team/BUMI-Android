@@ -17,7 +17,6 @@ import android.widget.Toast
 import com.dicoding.android.bumi.MainActivity
 import com.dicoding.android.bumi.R
 import com.dicoding.android.bumi.databinding.ActivityBusinessRecommendationBinding
-import com.dicoding.android.bumi.databinding.ActivityLoginBinding
 import java.lang.StringBuilder
 
 class BusinessRecommendationActivity : AppCompatActivity() {
@@ -46,14 +45,11 @@ class BusinessRecommendationActivity : AppCompatActivity() {
     }
 
     private fun pilihBidangKeahlian(): StringBuilder {
-        val kuliner: CheckBox
-        val rumah_tangga: CheckBox
-        val kesehatan: CheckBox
         val bidangKeahlian = StringBuilder()
 
-        kuliner = binding.checkboxKuliner
-        rumah_tangga = binding.checkboxRt
-        kesehatan = binding.checkboxKesehatan
+        val kuliner: CheckBox = binding.checkboxKuliner
+        val rumah_tangga: CheckBox = binding.checkboxRt
+        val kesehatan: CheckBox = binding.checkboxKesehatan
 
         when {
             kuliner.isChecked && rumah_tangga.isChecked && kesehatan.isChecked -> {
@@ -85,13 +81,9 @@ class BusinessRecommendationActivity : AppCompatActivity() {
     }
 
     private fun pilihModalUsaha(): StringBuilder {
-        val mikro: RadioButton
-        val kecil: RadioButton
-        val menengah: RadioButton
-
-        mikro = binding.radioMikro
-        kecil = binding.radioKecil
-        menengah = binding.radioMenengah
+        val mikro: RadioButton = binding.radioMikro
+        val kecil: RadioButton = binding.radioKecil
+        val menengah: RadioButton = binding.radioMenengah
         val modalUsaha = StringBuilder()
 
         if (mikro.isChecked){
