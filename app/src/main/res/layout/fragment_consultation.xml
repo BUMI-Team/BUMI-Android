@@ -1,159 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.consultation.ConsultationFragment">
 
-    <Spinner
-        android:id="@+id/category_spinner"
-        android:layout_width="376dp"
-        android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/consul_spinner_style"
-        android:contentDescription="@string/kategori_usaha"
-        android:spinnerMode="dropdown"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Spinner
-        android:id="@+id/time_consul_spinner"
-        android:layout_width="376dp"
-        android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/consul_spinner_style"
-        android:contentDescription="@string/waktu_konsul"
-        android:spinnerMode="dropdown"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/category_spinner" />
+        <Spinner
+            android:id="@+id/category_spinner"
+            android:layout_width="376dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/consul_spinner_style"
+            android:contentDescription="@string/kategori_usaha"
+            android:spinnerMode="dropdown"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/mentor_spinner"
-        android:layout_width="376dp"
-        android:layout_height="50dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/consul_spinner_style"
-        android:contentDescription="@string/mentor"
-        android:spinnerMode="dropdown"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time_consul_spinner" />
+        <Spinner
+            android:id="@+id/time_consul_spinner"
+            android:layout_width="376dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/consul_spinner_style"
+            android:contentDescription="@string/waktu_konsul"
+            android:spinnerMode="dropdown"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/category_spinner" />
 
-    <TextView
-        android:id="@+id/tv_jenis_usaha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/jenis_usaha_konsul"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mentor_spinner" />
+        <Spinner
+            android:id="@+id/mentor_spinner"
+            android:layout_width="376dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/consul_spinner_style"
+            android:contentDescription="@string/mentor"
+            android:spinnerMode="dropdown"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/time_consul_spinner" />
 
-    <TextView
-        android:id="@+id/tv_contoh_jenis_usaha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/contoh_jenis_usaha"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_jenis_usaha" />
+        <TextView
+            android:id="@+id/tv_jenis_usaha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/jenis_usaha_konsul"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mentor_spinner" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/jenisUsahaTextInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="376dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_contoh_jenis_usaha">
+        <TextView
+            android:id="@+id/tv_contoh_jenis_usaha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/contoh_jenis_usaha"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_jenis_usaha" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_jenis_usaha"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:background="@drawable/text_view_style" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/jenisUsahaTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_contoh_jenis_usaha">
 
-    <TextView
-        android:id="@+id/tv_pertanyaan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/pertanyaan_untuk_trainer"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jenisUsahaTextInputLayout" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_jenis_usaha"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/text_view_style" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tv_desc_pertanyaan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/desc_pertanyaan"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_pertanyaan" />
+        <TextView
+            android:id="@+id/tv_pertanyaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/pertanyaan_untuk_trainer"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jenisUsahaTextInputLayout" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/pertanyaanTextInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="376dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_desc_pertanyaan">
+        <TextView
+            android:id="@+id/tv_desc_pertanyaan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/desc_pertanyaan"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pertanyaan" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_pertanyaan"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:background="@drawable/text_view_style" />
-    </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pertanyaanTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc_pertanyaan">
 
-    <Button
-        android:id="@+id/btn_konsul_konfirm"
-        android:layout_width="376dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/button_style"
-        android:fontFamily="@font/poppins"
-        android:text="@string/konfirmasi_button"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pertanyaanTextInputLayout"
-        app:layout_constraintVertical_bias="0.87" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_pertanyaan"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/text_view_style" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btn_konsul_konfirm"
+            android:layout_width="376dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_style"
+            android:fontFamily="@font/poppins"
+            android:text="@string/konfirmasi_button"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pertanyaanTextInputLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

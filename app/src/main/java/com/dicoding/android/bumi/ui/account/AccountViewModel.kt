@@ -14,7 +14,7 @@ class AccountViewModel(application: Application) : AndroidViewModel(application)
     }
     val text: LiveData<String> = _text
 
-    // Logout
+//     Logout
 //    fun logout() {
 //        viewModelScope.launch {
 //            pref.logout()

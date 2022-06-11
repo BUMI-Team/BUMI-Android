@@ -84,7 +84,7 @@
                     android:drawableTint="@color/black"
                     android:enabled="false"
                     android:textColor="@color/black"
-                    android:text="Zefanya Sendri" />
+                    android:text="Zefanya" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout

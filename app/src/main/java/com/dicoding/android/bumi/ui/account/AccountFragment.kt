@@ -59,6 +59,7 @@ class AccountFragment : Fragment() {
 
 //         Account ViewModel
         accViewModel = ViewModelProvider(this)[AccountViewModel::class.java]
+//        Toast.makeText(activity,Constants.token,Toast.LENGTH_SHORT).show()
 
         if (uid != null) {
 //            onLoading(true)
@@ -128,11 +129,6 @@ class AccountFragment : Fragment() {
         }
 
         _binding?.btnLogout?.setOnClickListener {
-////             auth.signOut()
-////            accViewModel.logout()
-//
-//
-
             saveState()
             val intent = Intent(activity, WelcomeActivity::class.java)
             startActivity(intent)
