@@ -27,7 +27,7 @@
     <string name="search_button">Search Button</string>
     <string name="title_business_detail">Silahkan lengkapi data anda</string>
     <string name="jenis_usaha">Jenis usaha yang sedang dijalankan :</string>
-    <string name="contoh_jenis_usaha">(cth : restoran seafood, warung sembako, makanan beku)</string>
+    <string name="contoh_jenis_usaha">(cth : restoran seafood, warung sembako)</string>
     <string name="pilih_bidang_keahlian">Pilih bidang keahlian :</string>
     <string name="kuliner">Kuliner</string>
     <string name="rumahTangga">Rumah Tangga</string>
