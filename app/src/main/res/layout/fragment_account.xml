@@ -119,14 +119,14 @@
                 android:hint="Jenis Usaha">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_jenis_usaha_akun"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_baseline_storefront_24"
                     android:drawablePadding="15dp"
                     android:drawableTint="@color/black"
                     android:enabled="false"
-                    android:textColor="@color/black"
-                    android:text="Usaha Mikro" />
+                    android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -141,14 +141,14 @@
                 android:hint="Kategori Usaha">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_kategori_usaha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_baseline_category_24"
                     android:drawablePadding="15dp"
                     android:drawableTint="@color/black"
                     android:enabled="false"
-                    android:textColor="@color/black"
-                    android:text="Kuliner" />
+                    android:textColor="@color/black" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>

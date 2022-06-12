@@ -17,13 +17,12 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/tv_tipe_umkm"
+        android:id="@+id/tvTipeUmkm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="70dp"
         android:fontFamily="sans-serif-medium"
-        android:text="USAHA MIKRO"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -40,13 +39,12 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/tv_kategori_usaha"
+        android:id="@+id/tvKategoriUsaha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="155dp"
         android:fontFamily="sans-serif-medium"
-        android:text="KULINER"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -58,18 +56,17 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="205dp"
         android:fontFamily="@font/poppins"
-        android:text="Jenis usaha untuk anda: "
+        android:text="Rekomendasi usaha untuk anda: "
         android:textColor="@color/black"
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/tv_rekom_jenis_usaha"
+        android:id="@+id/tvRekomJenisUsaha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="265dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Makanan beku, Makanan cepat saji"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -81,7 +78,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/button_style"
         android:text="Konfirmasi"
         android:textAllCaps="false"

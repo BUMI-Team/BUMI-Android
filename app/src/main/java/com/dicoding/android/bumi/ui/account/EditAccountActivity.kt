@@ -14,8 +14,8 @@ import com.dicoding.android.bumi.MainActivity
 import com.dicoding.android.bumi.R
 import com.dicoding.android.bumi.databinding.ActivityEditAccountBinding
 import com.dicoding.android.bumi.utils.Constants
-import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.StorageReference
+//import com.google.firebase.storage.FirebaseStorage
+//import com.google.firebase.storage.StorageReference
 
 class EditAccountActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEditAccountBinding
@@ -24,8 +24,8 @@ class EditAccountActivity : AppCompatActivity() {
     private var PICK_IMAGE_REQUEST = 111
     private var filePath: Uri? = null
 
-    private val storage: FirebaseStorage = FirebaseStorage.getInstance()
-    private val storageRef: StorageReference = storage.getReferenceFromUrl("gs://bumi-api-4e903.appspot.com")
+//    private val storage: FirebaseStorage = FirebaseStorage.getInstance()
+//    private val storageRef: StorageReference = storage.getReferenceFromUrl("gs://bumi-api-4e903.appspot.com")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
