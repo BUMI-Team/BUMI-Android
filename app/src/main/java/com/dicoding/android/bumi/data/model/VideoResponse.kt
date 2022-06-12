@@ -4,11 +4,11 @@ import com.google.gson.annotations.SerializedName
 
 data class VideoResponse(
 
-	@field:SerializedName("VideoResponse")
-	val videoResponse: List<VideoResponseItem>
+	@field:SerializedName("listVideos")
+	val listVideos: ArrayList<ListVideosItem>
 )
 
-data class VideoResponseItem(
+data class ListVideosItem(
 
 	@field:SerializedName("thumbnail")
 	val thumbnail: String,

@@ -8,9 +8,9 @@ import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.dicoding.android.bumi.data.model.ListVideosItem
 import com.dicoding.android.bumi.data.model.UserResponse
 import com.dicoding.android.bumi.data.model.VideoResponse
-import com.dicoding.android.bumi.data.model.VideoResponseItem
 import com.dicoding.android.bumi.data.remote.ApiConfig
 import retrofit2.Call
 import retrofit2.Callback
@@ -18,7 +18,7 @@ import retrofit2.Response
 
 class Repository(application: Application) {
     private val user = MutableLiveData<UserResponse>()
-    private val listVideo = MutableLiveData<List<VideoResponseItem>>()
+    private val listVideo = MutableLiveData<ArrayList<ListVideosItem>>()
 
     // Get User
     fun setUser(): LiveData<UserResponse> {
@@ -70,7 +70,7 @@ class Repository(application: Application) {
                 response: Response<VideoResponse>
             ) {
                 if (response.isSuccessful) {
-                    listVideo.postValue(response.body()?.videoResponse)
+                    listVideo.postValue(response.body()?.listVideos)
                 }else {
                     Log.e(ContentValues.TAG, "onFailure: ${response.message()}")
                 }
@@ -83,7 +83,7 @@ class Repository(application: Application) {
         })
     }
 
-    fun getListVideo(): LiveData<List<VideoResponseItem>>{
+    fun getListVideo(): LiveData<ArrayList<ListVideosItem>>{
         return listVideo
     }
 }

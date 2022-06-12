@@ -6,13 +6,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.dicoding.android.bumi.data.model.VideoResponse
-import com.dicoding.android.bumi.data.model.VideoResponseItem
+import com.dicoding.android.bumi.data.model.ListVideosItem
 import com.dicoding.android.bumi.databinding.ItemRowVideoBinding
 
 class ListVideoAdapter : RecyclerView.Adapter<ListVideoAdapter.ListViewHolder>() {
 
-    private val listVideo = ArrayList<VideoResponseItem>()
+    private val listVideo = ArrayList<ListVideosItem>()
     private var ItemClickCallback: OnItemClickCallback? = null
 
     fun SetOnItemClickCallback(ItemClickCallback: OnItemClickCallback) {
@@ -21,7 +20,7 @@ class ListVideoAdapter : RecyclerView.Adapter<ListVideoAdapter.ListViewHolder>()
 
     inner class ListViewHolder(private var binding: ItemRowVideoBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bindingView(video: VideoResponseItem) {
+        fun bindingView(video: ListVideosItem) {
             binding.root.setOnClickListener {
                 ItemClickCallback?.ItemClicked(video)
             }
@@ -37,7 +36,7 @@ class ListVideoAdapter : RecyclerView.Adapter<ListVideoAdapter.ListViewHolder>()
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setList(listHomeVideo: List<VideoResponseItem>) {
+    fun setList(listHomeVideo: ArrayList<ListVideosItem>) {
         listVideo.clear()
         listVideo.addAll(listHomeVideo)
         notifyDataSetChanged()
@@ -56,6 +55,6 @@ class ListVideoAdapter : RecyclerView.Adapter<ListVideoAdapter.ListViewHolder>()
     override fun getItemCount(): Int = listVideo.size
 
     interface OnItemClickCallback {
-        fun ItemClicked(userData: VideoResponseItem)
+        fun ItemClicked(userData: ListVideosItem)
     }
 }
