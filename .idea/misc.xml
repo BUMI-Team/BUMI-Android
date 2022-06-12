@@ -43,6 +43,7 @@
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/drawable/indicator_selector.xml" value="0.1" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/drawable/selected.xml" value="0.131" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/drawable/unselected.xml" value="0.1" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/activity_business_recommendation.xml" value="0.1094224924012158" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/activity_consultation_agenda.xml" value="0.264" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/activity_detail_video.xml" value="0.1082427536231884" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/activity_edit_account.xml" value="0.2" />
@@ -53,12 +54,15 @@
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/activity_splash.xml" value="0.11094224924012158" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/activity_welcome.xml" value="0.11094224924012158" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/fragment_account.xml" value="0.264" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/fragment_consultation.xml" value="0.264" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/fragment_favorite.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/fragment_home.xml" value="0.176" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/item_row_consultation_agenda.xml" value="0.264" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/item_row_fav_video.xml" value="0.1109375" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/onboarding_screen_layout.xml" value="0.25" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/popup_after_login.xml" value="0.10099637681159421" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/popup_hasil_rekomendasi.xml" value="0.1094224924012158" />
+        <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/popup_konfirm_jadwal_konsul.xml" value="0.1094224924012158" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/layout/spinner_list.xml" value="0.25" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/menu/menu_option.xml" value="0.2212962962962963" />
         <entry key="..\:/Users/zefan/Documents/GoogleBangkit/BUMI-Android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.107" />
