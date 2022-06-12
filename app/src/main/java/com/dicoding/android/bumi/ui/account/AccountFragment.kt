@@ -38,6 +38,8 @@ class AccountFragment : Fragment() {
                     val tvName = binding.tvNameAcc
                     val tvEmail = binding.tvEmailAcc
 
+                    etJenisUsahaAkun.setText(Constants.EXTRA_TIPE_UMKM)
+                    etKategoriUsaha.setText(Constants.EXTRA_KATEGORI_UMKM)
                     tvName.setText(it.userRecord.displayName)
                     tvEmail.setText(it.userRecord.email)
                 }

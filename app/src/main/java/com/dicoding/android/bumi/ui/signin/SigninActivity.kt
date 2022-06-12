@@ -30,6 +30,7 @@ import com.dicoding.android.bumi.databinding.ActivitySigninBinding
 import com.dicoding.android.bumi.ui.recommendation.BusinessDetailActivity
 import com.dicoding.android.bumi.ui.recommendation.BusinessRecommendationActivity
 import com.dicoding.android.bumi.ui.signup.SignupActivity
+import com.dicoding.android.bumi.utils.Constants
 import com.dicoding.android.bumi.utils.PrefViewModelFactory
 import retrofit2.Call
 import retrofit2.Callback
@@ -105,7 +106,9 @@ class SigninActivity : AppCompatActivity() {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 val responseBody = response.body()
                 if (response.isSuccessful && responseBody != null) {
+                    Constants.token = "Bearer ${responseBody.userCredential.stsTokenManager.accessToken}"
                     onLoading(false)
+                    Constants.EXTRA_UID = responseBody.userCredential.uid
                     // DataStore
                     signinViewModel.saveUser(
                         User(

@@ -8,7 +8,9 @@ import android.os.Handler
 import android.view.WindowInsets
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.dicoding.android.bumi.ui.detail.DetailVideoActivity
 import com.dicoding.android.bumi.ui.onboarding.OnboardingActivity
+import com.dicoding.android.bumi.ui.recommendation.BusinessDetailActivity
 import com.dicoding.android.bumi.ui.signin.SigninActivity
 import com.dicoding.android.bumi.ui.welcome.WelcomeActivity
 
@@ -29,6 +31,7 @@ class SplashActivity : AppCompatActivity() {
                 }
                 "login" -> {
                     val intent = Intent(this@SplashActivity, MainActivity::class.java)
+//                    val intent = Intent(this@SplashActivity, DetailVideoActivity::class.java)
                     startActivity(intent)
                 }
                 else -> {

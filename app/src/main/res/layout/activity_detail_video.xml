@@ -6,14 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".ui.detail.DetailVideoActivity">
 
-    <ImageView
-        android:id="@+id/detail_video"
+<!--    <ImageView-->
+<!--        android:id="@+id/detail_video"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:contentDescription="@string/detail_traning_video"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:layout_editor_absoluteX="8dp"-->
+<!--        tools:src="@tools:sample/avatars" />-->
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youTubePlayerView"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:contentDescription="@string/detail_traning_video"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="8dp"
-        tools:src="@tools:sample/avatars" />
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+    </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
+
+    <Button
+        android:id="@+id/buttonFullScreen"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/ic_fullscreen"
+        app:layout_constraintBottom_toTopOf="@+id/separate_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/youTubePlayerView" />
 
     <TextView
         android:id="@+id/detail_video_title"
@@ -25,7 +43,7 @@
         android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail_video" />
+        app:layout_constraintTop_toBottomOf="@+id/youTubePlayerView" />
 
     <View
         android:id="@+id/separate_line"
@@ -41,15 +59,15 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="6dp"
         android:background="@drawable/favorite_toggle"
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:text="@string/toggleFav"
         android:textOff=""
         android:textOn=""
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail_video" />
+        app:layout_constraintEnd_toStartOf="@+id/buttonFullScreen"
+        app:layout_constraintTop_toBottomOf="@+id/youTubePlayerView" />
 
     <TextView
         android:id="@+id/detail_desc_title"

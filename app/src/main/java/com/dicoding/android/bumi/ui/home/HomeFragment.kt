@@ -6,15 +6,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.dicoding.android.bumi.R
+import com.dicoding.android.bumi.adapter.ListVideoAdapter
 import com.dicoding.android.bumi.databinding.FragmentHomeBinding
+import com.dicoding.android.bumi.ui.account.AccountViewModel
+import com.dicoding.android.bumi.utils.Constants
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var adapter: ListVideoAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,14 +28,23 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
         val root: View = binding.root
         binding.svSearchVideo.queryHint = getString(R.string.searchHint)
         binding.svSearchVideo.setIconifiedByDefault(false)
         setBannerSlider()
         setSpinner()
-//        setupViewModel()
-
+        adapter = ListVideoAdapter()
+        homeViewModel.setVideo().observe(viewLifecycleOwner, {
+            if (it != null) {
+                adapter.setList(it)
+            }
+        })
         return root
+    }
+
+    private fun setupListVideo(genre : String) {
+        homeViewModel.getListHomeVideo(genre)
     }
 
     override fun onDestroyView() {
@@ -53,7 +68,10 @@ class HomeFragment : Fragment() {
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 val selectedItem = parent?.getItemAtPosition(position)
-//                Toast.makeText(activity, "$selectedItem Selected", Toast.LENGTH_SHORT).show()
+                var selectedCategory : String
+                selectedCategory = selectedItem as String
+                setupListVideo("Kuliner")
+                Toast.makeText(activity, selectedCategory, Toast.LENGTH_SHORT).show()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {

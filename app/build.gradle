@@ -84,4 +84,6 @@ dependencies {
     implementation "io.insert-koin:koin-core:3.2.0-beta-1"
     implementation "io.insert-koin:koin-android:3.2.0-beta-1"
     implementation 'com.firebaseui:firebase-ui-storage:7.2.0'
+
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.26'
 }

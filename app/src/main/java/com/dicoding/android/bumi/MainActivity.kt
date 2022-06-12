@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var mainViewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,14 +55,14 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         // Home ViewModel
-        homeViewModel = ViewModelProvider(
+        mainViewModel = ViewModelProvider(
             this,
             PrefViewModelFactory(LoginPreferences.getInstance(dataStore))
-        )[HomeViewModel::class.java]
+        )[MainViewModel::class.java]
 
         // Home ViewModel
         var name: String
-        homeViewModel.getUser().observe(this) { user ->
+        mainViewModel.getUser().observe(this) { user ->
 //            if (user.isLogin) {
             token = "Bearer ${user.token}"
             name = user.name
