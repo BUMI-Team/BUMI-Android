@@ -1,7 +1,8 @@
 # BUMI - Bangun UMKM Indonesia
 
 <p align="center">
-  <img src="" alt="BUMI Logo" width="200" height="200">
+  <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/iconBumiWhite.png" alt="BUMI Logo" width="200" height="200">
+  <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/iconBangkit.jpg" alt="Bangkit Logo" width="200" height="200">
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -61,17 +62,18 @@ In order to duplicate our repository to become your repository on your own githu
 ## Screenshoot
 
 <p align="center">
-  <img src="" alt="splash screen" style="margin-right: 10px;" width="150">
-  <img src="" alt="onboarding" style="margin-right: 10px;" width="150">
-  <img src="" alt="signup" style="margin-right: 10px;" width="150">
-  <img src="" alt="signin" style="margin-right: 10px;" width="150">
+  <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/splash.png" alt="splash screen" style="margin-right: 10px;" width="150">
+  <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/onboarding.png" alt="onboarding" style="margin-right: 10px;" width="150">
+  <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/welcome.png" alt="welcome" style="margin-right: 10px;" width="150">
+  <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/signup.png" alt="signup" style="margin-right: 10px;" width="150">
+  <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/signin.png" alt="signin" style="margin-right: 10px;" width="150">
   <img src="" alt="home" style="margin-right: 10px;" width="150">
   <img src="" alt="detail" style="margin-right: 10px;" width="150">
   <img src="" alt="recommendation" style="margin-right: 10px;" width="150">
   <img src="" alt="consultation" style="margin-right: 10px;" width="150">
   <img src="" alt="favorit" style="margin-right: 10px;" width="150">
-  <img src="" alt="account" style="margin-right: 10px;" width="150">
-  <img src="" alt="edit profil account" style="margin-right: 10px;" width="150">
+  <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/account.png" alt="account" style="margin-right: 10px;" width="150">
+  <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/edit_profil.png" alt="edit profil account" style="margin-right: 10px;" width="150">
 </p>
 
 <!-- Team Members -->
