@@ -35,13 +35,16 @@
 
     <TextView
         android:id="@+id/detail_video_title"
-        android:layout_width="wrap_content"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:maxLines="4"
         android:text="@string/video_title"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/separate_line"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/youTubePlayerView" />
 
@@ -85,12 +88,13 @@
 
     <TextView
         android:id="@+id/detail_desc"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:maxLines="6"
         android:text="@string/video_description"
-        android:textSize="15sp"
+        android:textAlignment="textStart"
+        android:textSize="13sp"
         app:layout_constraintStart_toStartOf="@+id/detail_desc_title"
         app:layout_constraintTop_toBottomOf="@+id/detail_desc_title" />
 
@@ -99,9 +103,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
         android:gravity="center"
         android:text="Rekomendasi Video"
-        android:fontFamily="@font/poppins"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -109,7 +113,7 @@
         app:layout_constraintTop_toBottomOf="@+id/detail_desc" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_training_video"
+        android:id="@+id/list_training_video_recom"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
