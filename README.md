@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/iconBumiWhite.png" alt="BUMI Logo" width="200" height="200">
-  <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/iconBangkit.jpg" alt="Bangkit Logo" width="200" height="200">
+  <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/iconBangkit.png" alt="Bangkit Logo" width="200" height="200">
 </p>
 
 <!-- TABLE OF CONTENTS -->
