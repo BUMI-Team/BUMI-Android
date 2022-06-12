@@ -1,22 +1,91 @@
-# Training-Platform-for-Micro-Small-and-Medium-Enterprises
+# BUMI - Bangun UMKM Indonesia
 
-## Description
-This repo aims to track a product-based capstone project in Bangkit 2022.
+<p align="center">
+  <img src="" alt="BUMI Logo" width="200" height="200">
+</p>
 
-## Executive Summary/Abstract: 
+<!-- TABLE OF CONTENTS -->
 
-The Indonesian government is eager to advance Micro, Small, and Medium Enterprise in their business to the digital realm during the pandemic. They have done a lot of training and coaching for 3 majority businesses, specifically in the food/drink, home care, and health care sector. However, what the government is trying to do with training and coaching does not yet have a digital platform that can be used as an online training platform. There are many interests that make it easier for MSMEs in their business if the documentation of training and coaching can be accessed neatly at any time as long as they are connected to the internet. We proposed an idea based on the context we explained. A mobile application that has the purpose of training Micro, Small, and Medium Enterprise Business. This app has two main features, the first one is user level based on what the user said in the register page, it can be common with zero experience and basic with a little experience. Second, a youtube video ranking recommendation based on likes, views, also user level as in beginner and advanced. 
+## Table of Contents
 
-## Contributors:
+* [About the Project](#about-the-project)
+* [How to Contribute](#how-to-contribute)
+  * [Download or Clone](#download-or-clone)
+  * [Fork Repository](#fork-repository)
+* [Screenshoot](#screenshoot)
+* [License](#license)
+* [Team Members](#team-members)
 
-(ML) M7008G0794 - Muhammad Nur Ilmi - Universitas Gadjah Mada - mnurilmi18@gmail.com
+<!-- ABOUT THE PROJECT -->
 
-(ML) M2002G0062 - Melia Fatimah - Institut Teknologi Bandung - meliafatimah@gmail.com
+## About The Project
 
-(MD) A7003F0130 - Zefanya Sendri Wiloso - Institut Teknologi Harapan Bangsa - zefanyasendri@gmail.com
+BUMI (Bangun UMKM Indonesia) is a mobile application that has the purpose of training Micro, Small, and Medium Enterprise Business.
 
-(MD) A7003F0131 - Gilbert Cefryo Palentein - Institut Teknologi Harapan Bangsa - gilbertpalentein8@gmail.com
+<!-- ABOUT THE PROJECT -->
 
-(CC) C2003F0132 - Hilbert Hasiholan Purba  - Institut Teknologi Harapan Bangsa - hilberthpurba@gmail.com
+## How to Contribute
 
-(CC) C2002G0065 - Elang Aditya Rahman  - Institut Teknologi Bandung - elangadityar@gmail.com
+### Download or Clone
+
+1. Download project <b>Or</b>
+2. Clone Repository by Click on a green dropdown that says <b>Code</b> and **copy** HTTPS link
+3. Work on the project locally in your own computer.
+4. **Create new Branch** based on the feature you make using " git checkout -b <new_branch> " <br/>
+   Example :
+
+```
+git checkout -b branch_b
+```
+
+5. **Commit** changes to your branch. Don't forget to give proper commit message so other people can understand it <br/>
+   Example:
+
+```
+git commit -m "add features b"
+```
+
+6. **Push** to your branch <br/>
+   Example:
+
+```
+git push origin branch_b
+```
+
+### Fork Repository
+
+In order to duplicate our repository to become your repository on your own github account, you need to **fork** this repository. Forking repository allows you to modificate this project without affecting the original project.
+
+<!-- Screenshoot -->
+
+## Screenshoot
+
+<p align="center">
+  <img src="" alt="splash screen" style="margin-right: 10px;" width="150">
+  <img src="" alt="onboarding" style="margin-right: 10px;" width="150">
+  <img src="" alt="signup" style="margin-right: 10px;" width="150">
+  <img src="" alt="signin" style="margin-right: 10px;" width="150">
+  <img src="" alt="home" style="margin-right: 10px;" width="150">
+  <img src="" alt="detail" style="margin-right: 10px;" width="150">
+  <img src="" alt="recommendation" style="margin-right: 10px;" width="150">
+  <img src="" alt="consultation" style="margin-right: 10px;" width="150">
+  <img src="" alt="favorit" style="margin-right: 10px;" width="150">
+  <img src="" alt="account" style="margin-right: 10px;" width="150">
+  <img src="" alt="edit profil account" style="margin-right: 10px;" width="150">
+</p>
+
+<!-- Team Members -->
+
+## Team Members
+
+
+|          Member          | Student ID |        Path        |            University            |
+| :------------------------: | :----------: | :------------------: | :---------------------------------: |
+|    Muhammad Nur Ilmi    | M7008G0794 |  Machine Learning  |      Universitas Gadjah Mada      |
+|      Melia Fatimah      | M2002G0062 |  Machine Learning  |    Institut Teknologi Bandung    |
+|  Zefanya Sendri Wiloso  | A7003F0130 | Mobile Development | Institut Teknologi Harapan Bangsa |
+| Gilbert Cefryo Palentein | A7003F0131 | Mobile Development | Institut Teknologi Harapan Bangsa |
+| Hilbert Hasiholan Purba | C2003F0132 |  Cloud Computing  | Institut Teknologi Harapan Bangsa |
+|   Elang Aditya Rahman   | C2002G0065 |  Cloud Computing  |    Institut Teknologi Bandung    |
+
+Copyright © 2022, [BUMI Team](https://github.com/BUMI-Team).
