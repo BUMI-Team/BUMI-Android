@@ -12,7 +12,7 @@
 
         <Spinner
             android:id="@+id/category_spinner"
-            android:layout_width="376dp"
+            android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
@@ -26,7 +26,7 @@
 
         <Spinner
             android:id="@+id/time_consul_spinner"
-            android:layout_width="376dp"
+            android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
@@ -40,7 +40,7 @@
 
         <Spinner
             android:id="@+id/mentor_spinner"
-            android:layout_width="376dp"
+            android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
@@ -56,7 +56,7 @@
             android:id="@+id/tv_jenis_usaha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/poppins"
             android:text="@string/jenis_usaha_konsul"
@@ -70,7 +70,7 @@
             android:id="@+id/tv_contoh_jenis_usaha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="4dp"
             android:text="@string/contoh_jenis_usaha"
             android:textColor="@color/black"
@@ -81,7 +81,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/jenisUsahaTextInputLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="376dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
@@ -101,7 +101,7 @@
             android:id="@+id/tv_pertanyaan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/poppins"
             android:text="@string/pertanyaan_untuk_trainer"
@@ -115,7 +115,7 @@
             android:id="@+id/tv_desc_pertanyaan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="4dp"
             android:text="@string/desc_pertanyaan"
             android:textColor="@color/black"
@@ -126,7 +126,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/pertanyaanTextInputLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="376dp"
+            android:layout_width="360dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="4dp"
@@ -144,7 +144,7 @@
 
         <Button
             android:id="@+id/btn_konsul_konfirm"
-            android:layout_width="376dp"
+            android:layout_width="360dp"
             android:layout_height="40dp"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="16dp"
