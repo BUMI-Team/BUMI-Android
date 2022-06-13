@@ -43,31 +43,18 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
         binding.svSearchVideo.queryHint = getString(R.string.searchHint)
         binding.svSearchVideo.setIconifiedByDefault(false)
-//        val sharedPrefsWatchHistory =
-//            activity?.getSharedPreferences("sharedPrefsWatchHistory", Context.MODE_PRIVATE)
-//        setBannerSlider()
-//        setSpinner()
         adapter = ListVideoAdapter()
         adapter.SetOnItemClickCallback(object : ListVideoAdapter.OnItemClickCallback {
             override fun ItemClicked(videoData: ListVideosItem) {
-//                idWatchHistory.append(videoData.noID.toString())
                 Constants.EXTRA_WATCH_HISTORY_ID = videoData.noID
                 Constants.EXTRA_VIDEO_ID = videoData.id
                 Constants.EXTRA_VIDEO_TITLE = videoData.title
                 Constants.EXTRA_VIDEO_DESC = videoData.description
                 Constants.EXTRA_VIDEO_INDEX_ID = videoData.noID.toString()
-//                Intent(activity, DetailVideoActivity::class.java).also {
-//                    startActivity(it)
-//                }
                 val intent = Intent(activity, DetailVideoActivity::class.java)
                 startActivity(intent)
             }
         })
-//        val editor = sharedPrefsWatchHistory?.edit()
-//        editor?.apply {
-//            putString("ID_WATCH_HISTORY", idWatchHistory.toString())
-//        }?.apply()
-//        Constants.EXTRA_WATCH_HISTORY_ID = idWatchHistory.toString()
         Toast.makeText(activity, "${Constants.EXTRA_WATCH_HISTORY_ID}", Toast.LENGTH_SHORT).show()
         binding.apply {
             if (requireActivity().resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {

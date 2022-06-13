@@ -1,6 +1,8 @@
 package com.dicoding.android.bumi.ui.detail
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
@@ -21,36 +23,13 @@ class DetailVideoActivity : AppCompatActivity() {
         binding = ActivityDetailVideoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         binding.apply {
             setupVideo(Constants.EXTRA_VIDEO_ID)
             detailVideoTitle.text = Constants.EXTRA_VIDEO_TITLE
             detailDesc.text = Constants.EXTRA_VIDEO_DESC
         }
-
-//        youTubePlayerView.enterFullScreen()
-//        youTubePlayerView.toggleFullScreen()
-//        youTubePlayerView.exitFullScreen();
-//        youTubePlayerView.isFullScreen();
-
-        // here we are adding observer to our youtubeplayerview.
-//        lifecycle.addObserver(youTubePlayerView)
-
-        // below method will provides us the youtube player
-        // ui controller such as to play and pause a video
-        // to forward a video
-        // and many more features.
-//        youTubePlayerView.getPlayerUiController()
-
-        // adding listener for our youtube player view.
-//
-//        binding.buttonFullScreen.setOnClickListener {
-//            youTubePlayerView.enterFullScreen();
-//        }
-
-
-//        youTubePlayerView.exitFullScreen();
-//        youTubePlayerView.isFullScreen();
-//        youTubePlayerView.toggleFullScreen();
     }
 
     private fun setupVideo(videoId: String) {
@@ -72,5 +51,18 @@ class DetailVideoActivity : AppCompatActivity() {
         })
     }
 
+    // Option Menu
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_option, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            android.R.id.home -> {
+                finish()
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
 }

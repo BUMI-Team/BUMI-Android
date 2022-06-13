@@ -1,13 +1,8 @@
 package com.dicoding.android.bumi
 
-import android.app.Dialog
-import android.content.ContentValues
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -19,8 +14,6 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.dicoding.android.bumi.data.local.datastore.LoginPreferences
 import com.dicoding.android.bumi.databinding.ActivityMainBinding
-import com.dicoding.android.bumi.ui.home.HomeViewModel
-import com.dicoding.android.bumi.ui.welcome.WelcomeActivity
 import com.dicoding.android.bumi.utils.Constants
 import com.dicoding.android.bumi.utils.Constants.token
 import com.dicoding.android.bumi.utils.PrefViewModelFactory
@@ -68,31 +61,15 @@ class MainActivity : AppCompatActivity() {
             name = user.name
             Constants.EXTRA_UID = user.uid
 
-//                startActivity(Intent(this, MainActivity::class.java))
-
-            // Test
-            Toast.makeText(this@MainActivity, token, Toast.LENGTH_SHORT).show()
-            Log.e(ContentValues.TAG, "Token: $token")
-            Toast.makeText(this@MainActivity, user.uid, Toast.LENGTH_SHORT).show()
-
             binding.apply {
-//                    val listVideo = rv.findViewById<RecyclerView>(R.id.list_training_video)
-//                    listVideo.layoutManager = LinearLayoutManager(this@MainActivity)
                 getToken(token)
             }
-//                finish()
-//            } else {
-//                startActivity(Intent(this, WelcomeActivity::class.java))
-//                finish()
-//            }
         }
     }
 
     private fun getToken(token: String) {
         binding.apply {
             if (token.isEmpty()) return
-//            onLoading(true)
-//            mainViewModel.setListStory(token)
         }
     }
 
@@ -101,11 +78,4 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-
-    // Loading
-//    private fun onLoading(data: Boolean) {
-//        val visibilityState = if(data) View.VISIBLE else View.INVISIBLE
-//        binding.progressBar.visibility = visibilityState
-//        binding.tvMsg.visibility = visibilityState
-//    }
 }
