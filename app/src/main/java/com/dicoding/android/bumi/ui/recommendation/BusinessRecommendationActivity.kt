@@ -17,8 +17,6 @@ import android.view.WindowManager
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import com.dicoding.android.bumi.MainActivity
 import com.dicoding.android.bumi.R
 import com.dicoding.android.bumi.data.model.InputRecomResponse
@@ -191,16 +189,6 @@ class BusinessRecommendationActivity : AppCompatActivity() {
 
         Constants.EXTRA_TIPE_UMKM = type
         Constants.EXTRA_KATEGORI_UMKM = category
-
-//        val sharedPreference = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-//        val editor1 = sharedPreference.edit()
-//        val editor2 = sharedPreference.edit()
-//        editor1.apply {
-//            putString("TIPE_UMKM_KEY", type)
-//        }.apply()
-//        editor2.apply {
-//            putString("KATEGORI_UMKM_KEY", category)
-//        }.apply()
 
         val btnKonfirm = popUpDialog.findViewById<Button>(R.id.btn_konfirm_hasil_rekom)
         btnKonfirm.setOnClickListener {

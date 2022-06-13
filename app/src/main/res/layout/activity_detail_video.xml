@@ -112,15 +112,12 @@
         app:layout_constraintStart_toStartOf="@+id/detail_desc"
         app:layout_constraintTop_toBottomOf="@+id/detail_desc" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_training_video_recom"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_rekom"
-        tools:listitem="@layout/item_row_video" />
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youTubePlayerView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:videoId="gdx1LCX08Oo"
+        app:layout_constraintTop_toBottomOf="@+id/title_rekom">
 
+    </com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
 </androidx.constraintlayout.widget.ConstraintLayout>

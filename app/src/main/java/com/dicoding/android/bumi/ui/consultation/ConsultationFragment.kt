@@ -63,7 +63,6 @@ class ConsultationFragment : Fragment() {
                 id: Long
             ) {
                 val selectedItem = parent?.getItemAtPosition(position)
-//                Toast.makeText(activity, "$selectedItem Selected", Toast.LENGTH_SHORT).show()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {

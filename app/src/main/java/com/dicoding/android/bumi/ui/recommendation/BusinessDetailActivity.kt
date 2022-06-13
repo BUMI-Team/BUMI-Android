@@ -15,10 +15,8 @@ import android.widget.CheckBox
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AlertDialog
 import com.dicoding.android.bumi.MainActivity
 import com.dicoding.android.bumi.data.model.InputRecomResponse
-import com.dicoding.android.bumi.data.model.RegisterResponse
 import com.dicoding.android.bumi.data.remote.ApiConfig
 import com.dicoding.android.bumi.databinding.ActivityBusinessDetailBinding
 import com.dicoding.android.bumi.utils.Constants

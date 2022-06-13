@@ -55,7 +55,7 @@ interface ApiService {
     ): Call<VideoResponse>
 
     @FormUrlEncoded
-    @POST("api/v1/genre")
+    @POST("api/v1/inference")
     fun recommVideo(
         @Field("genre") genre :String,
     ): Call<VideoResponse>

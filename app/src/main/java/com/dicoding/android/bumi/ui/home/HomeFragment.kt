@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
-import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,9 +18,7 @@ import com.dicoding.android.bumi.R
 import com.dicoding.android.bumi.adapter.ListVideoAdapter
 import com.dicoding.android.bumi.data.model.ListVideosItem
 import com.dicoding.android.bumi.databinding.FragmentHomeBinding
-import com.dicoding.android.bumi.ui.account.AccountViewModel
 import com.dicoding.android.bumi.ui.detail.DetailVideoActivity
-import com.dicoding.android.bumi.ui.welcome.WelcomeActivity
 import com.dicoding.android.bumi.utils.Constants
 import java.lang.StringBuilder
 
@@ -44,9 +41,12 @@ class HomeFragment : Fragment() {
         binding.svSearchVideo.queryHint = getString(R.string.searchHint)
         binding.svSearchVideo.setIconifiedByDefault(false)
         adapter = ListVideoAdapter()
+        val sharedPrefsWatchHistory =
+            activity?.getSharedPreferences("sharedPrefsWatchHistory", Context.MODE_PRIVATE)
         adapter.SetOnItemClickCallback(object : ListVideoAdapter.OnItemClickCallback {
             override fun ItemClicked(videoData: ListVideosItem) {
-                Constants.EXTRA_WATCH_HISTORY_ID = videoData.noID
+                idWatchHistory.append(videoData.noID.toString())
+                Constants.EXTRA_WATCH_HISTORY_ID = idWatchHistory.toString()
                 Constants.EXTRA_VIDEO_ID = videoData.id
                 Constants.EXTRA_VIDEO_TITLE = videoData.title
                 Constants.EXTRA_VIDEO_DESC = videoData.description
@@ -55,7 +55,6 @@ class HomeFragment : Fragment() {
                 startActivity(intent)
             }
         })
-        Toast.makeText(activity, "${Constants.EXTRA_WATCH_HISTORY_ID}", Toast.LENGTH_SHORT).show()
         binding.apply {
             if (requireActivity().resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
                 listTrainingVideo.layoutManager = GridLayoutManager(activity, 2)
@@ -77,10 +76,8 @@ class HomeFragment : Fragment() {
     }
 
     private fun setWatchHistory() {
-//        val sharedPrefsWatchHistory =
-//            activity?.getSharedPreferences("sharedPrefsWatchHistory", Context.MODE_PRIVATE)
-//        Constants.EXTRA_WATCH_HISTORY_ID = idWatchHistory.toString()
-        Toast.makeText(activity, "${Constants.EXTRA_WATCH_HISTORY_ID}", Toast.LENGTH_SHORT).show()
+        val sharedPrefsWatchHistory =
+            activity?.getSharedPreferences("sharedPrefsWatchHistory", Context.MODE_PRIVATE)
     }
 
     private fun setupListVideo(genre: String) {

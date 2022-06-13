@@ -4,8 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.dicoding.android.bumi.MainViewModel
 import com.dicoding.android.bumi.data.local.datastore.LoginPreferences
-import com.dicoding.android.bumi.ui.account.AccountViewModel
-import com.dicoding.android.bumi.ui.home.HomeViewModel
 import com.dicoding.android.bumi.ui.signin.SigninViewModel
 
 class PrefViewModelFactory(private val pref: LoginPreferences) : ViewModelProvider.NewInstanceFactory() {

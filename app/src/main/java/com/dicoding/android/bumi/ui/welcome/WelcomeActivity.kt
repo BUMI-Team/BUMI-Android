@@ -3,17 +3,13 @@ package com.dicoding.android.bumi.ui.welcome
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.android.bumi.databinding.ActivityWelcomeBinding
 import com.dicoding.android.bumi.ui.signin.SigninActivity
 import com.dicoding.android.bumi.ui.signup.SignupActivity
-import com.google.android.gms.common.SignInButton
-
 
 class WelcomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWelcomeBinding

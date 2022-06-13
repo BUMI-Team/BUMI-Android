@@ -56,7 +56,6 @@ class MainActivity : AppCompatActivity() {
         // Home ViewModel
         var name: String
         mainViewModel.getUser().observe(this) { user ->
-//            if (user.isLogin) {
             token = "Bearer ${user.token}"
             name = user.name
             Constants.EXTRA_UID = user.uid
