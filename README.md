@@ -93,8 +93,8 @@ In order to duplicate our repository to become your repository on your own githu
   <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/dialog_usaha.png" alt="dialog business" style="margin-right: 10px;" width="150">
   <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/input_bussiness_recommender.png" alt="recommendation input" style="margin-right: 10px;" width="150">
   <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/hasil_rekomendasi.png" alt="recommendation result" style="margin-right: 10px;" width="150">
-  <img src="" alt="home" style="margin-right: 10px;" width="150">
-  <img src="" alt="detail" style="margin-right: 10px;" width="150">
+  <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/home.png" alt="home" style="margin-right: 10px;" width="150">
+  <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/detail.png" alt="detail" style="margin-right: 10px;" width="150">
   <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/jadwal_konsultasi.png" alt="consultation" style="margin-right: 10px;" width="150">
   <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/account.png" alt="account" style="margin-right: 10px;" width="150">
   <img src="https://github.com/BUMI-Team/BUMI-Android/blob/main/screenshot/edit_profil.png" alt="edit profil account" style="margin-right: 10px;" width="150">
