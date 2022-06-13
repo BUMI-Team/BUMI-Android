@@ -36,4 +36,33 @@ interface ApiService {
         @Field("displayName") name: String,
         @Field("email") email: String
     ): Call<UserResponse>
+
+    @FormUrlEncoded
+    @POST("api/recommender")
+    fun inputRecommendation(
+        @Header("Authorization") authToken: String,
+        @Field("punya_usaha") statusUsaha :Boolean,
+        @Field("bidang_keahlian") listBidangKeahlian :List<String>,
+        @Field("hobi") listHobi :List<String>,
+        @Field("modal_usaha") modalUsaha :String,
+        @Field("nama_usaha") namaUsaha :String
+    ): Call<InputRecomResponse>
+
+    @FormUrlEncoded
+    @POST("api/v1/genre")
+    fun homeVideo(
+        @Field("genre") genre :String,
+    ): Call<VideoResponse>
+
+    @FormUrlEncoded
+    @POST("api/v1/genre")
+    fun recommVideo(
+        @Field("genre") genre :String,
+    ): Call<VideoResponse>
+
+    @FormUrlEncoded
+    @POST("api/v1/bRecommendation")
+    fun businessRecomResult(
+        @Field("user_id") user_id :String,
+    ): Call<RecommendationResultResponse>
 }

@@ -14,7 +14,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="270dp"
         android:background="@color/transparent"
         android:padding="8dp">
 
@@ -35,8 +35,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/item_video"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="bold"
+            android:maxLines="2"
+            android:fontFamily="@font/poppins"
             card_view:layout_constraintBottom_toBottomOf="parent"
             card_view:layout_constraintEnd_toEndOf="parent"
             card_view:layout_constraintStart_toStartOf="parent"
